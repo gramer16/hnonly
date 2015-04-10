@@ -24,7 +24,7 @@ en:
   Service: Services
   subscribe: SUBSCRIBE
   listing: POST LISTING
-  title_html: <h4 style="font-family:Calibri", align="center"><font color="004bb3"><font size="10"><%= title 'Everything Motors - Only Motors' %></font></font></h4>
+  title_html: <h4 style="font-family:Calibri", align="center"><font color="004bb3"><font size="10">Everything Real Estate - Only Real Estate</font></font></h4>
   subtitle_html:  <font color="ff0019"><h2 style="font-family:Calibri"><strong>What are you Looking for?</strong></h2></font>
         <p class="lead"></p>
   semititle_html:  <font color="004bb3"><h3 class="panel-title", style="font-family:Calibri"><strong>RESIDENTIAL REAL ESTATE</strong></h3></font>
