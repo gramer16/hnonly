@@ -11,7 +11,7 @@ fr:
   Service: Servicios
   subscribe: SUBSCRIBIR
   listing: PUBLICAR UNA PROPIEDAD
-  title_html: <h4 style="font-family:Calibri", align="center"><font color="004bb3"><font size="10">Todo en Bienes y Raices - Solo Bienes y Raices</font></font></h4>
+  title_html: <h4 style="font-family:Calibri", align="center"><font color="004bb3"><font size="10"><%= title 'Todo en Bienes y Raices - Solo Bienes y Raices' %></font></font></h4>
   subtitle_html:  <font color="ff0019"><h2 style="font-family:Calibri"><strong>Que servicio desea encontrar?</strong></h2></font>
         <p class="lead"></p>
   semititle_html:  <font color="004bb3"><h3 class="panel-title", style="font-family:Calibri"><strong>BIENES Y RAICES RESIDENCIAL</strong></h3></font>
