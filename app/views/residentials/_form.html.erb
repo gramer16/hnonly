@@ -1,0 +1,176 @@
+
+<%= form_for(@residential, :html => { :multipart => true }) do |f| %>
+  <% if @residential.errors.any? %>
+    <div id="error_explanation" class="alert alert-danger alert-dismissable">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <h4><%= pluralize(@residential.errors.count, "error") %> prohibited this residential from being saved:</h4>
+
+      <ul>
+      <% @residential.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="thumbnail">
+  <div class="row">
+    <div class="left">
+    <div class="col-md-4">
+    <%= label_tag :property_for %><br>
+    <%= f.select :action, options_for_select([["Choose", "Choose"],["Sale", "Sale"],["For sale but with Lease Option","Lease"]]), class: "form-control" %><br>
+  </div>
+  <div class="col-md-4">
+    <%= label_tag :mls_number %><br>
+    <%= f.text_field :mls_number, class: "form-control"  %><br>
+  </div>
+  <div class="col-md-4">
+    <%= label_tag :address %><br>
+    <%= f.text_area :address, class: "form-control" %><br>
+  </div>
+  <div class="col-md-4">
+    <%= label_tag :type_of_property %><br>
+    <%= f.select :property_type, options_for_select([ ["Choose a Type of Property","Any Type of Property"],["Single Family","Single Family Home"],["Townhouse/Condo","Townhouse or Condo"],["Mid/Hi Condominium","High Condominium"],["Residential_Lots","Lots"],["Multi-Family Home","Multi Family Home"]]), class: "form-control" %><br>
+  </div>
+  <div class="col-md-4">
+    <%= f.label :bedrooms %><br>
+    <%= f.number_field :bedrooms, class: "form-control" %><br>
+  </div>
+  <div class="col-md-4">
+    <%= f.label :full_bathrooms %><br>
+    <%= f.number_field :full_bathrooms, class: "form-control" %><br>
+  </div>
+  <div class="col-md-4">
+    <%= f.label :half_bathrooms %><br>
+    <%= f.number_field :half_bathrooms, class: "form-control" %><br>
+  </div>
+  <div class="col-md-4">
+    <%= f.label :square_feet %><br>
+    <%= f.number_field :square_feet, class: "form-control" %><br>
+  </div>
+  <div class="col-md-4">
+    <%= f.label :price %><br>
+    <%= f.text_field :price, class: "form-control" %><br>
+  </div>
+  <div class="col-md-4">
+    <%= f.label :zip_code %><br>
+    <%= f.number_field :zip_code, class: "form-control" %><br>
+  </div>
+  <div class="col-md-4">
+    <%= f.label :lot_size %><br>
+    <%= f.number_field :lot_size, class: "form-control" %><br>
+  </div>
+  <div class="col-md-4">
+    <%= f.label :garage %><br>
+    <%= f.number_field :garage, class: "form-control" %><br>
+  </div>
+   <div class="col-md-4">
+    <%= f.label :city %><br>
+    <%= f.text_field :city, class: "form-control" %><br>
+  </div>
+  
+  <div class="col-md-4">
+    <%= f.label :stories %><br>
+    <%= f.number_field :stories, class: "form-control" %><br>
+  </div>
+  <div class="col-md-4">
+    <%= f.label :year_built %><br>
+    <%= f.number_field :year_built, class: "form-control" %><br>
+  </div>
+  <div class="col-md-4">
+    <%= f.label :maintenance_fee %><br>
+    <%= f.text_field :maintenancefee, class: "form-control" %><br>
+  </div>
+  <div class="col-md-4">
+    <%= f.label :key_map %><br>
+    <%= f.text_field :keymap, class: "form-control" %><br>
+  </div>
+  <div class="col-md-4">
+    <%= label_tag :realtor_lincense_number %><br>
+    <%= f.text_field :realorlicense, class: "form-control" %><br>
+  </div>
+  <div class="col-md-4">
+    <%= f.label :realtor_name %><br>
+    <%= f.text_field :realtorname, class: "form-control" %><br>
+  </div>
+   <div class="col-md-4">
+    <%= f.label :realtor_phone_number %><br>
+    <%= f.text_field :realtorphonenumber, class: "form-control" %><br>
+  </div>
+  <div class="col-md-4">
+    <%= f.label :realtor_email %><br>
+    <%= f.text_field :realtoremail, class: "form-control" %><br>
+  </div>
+  <div class="col-md-4">
+    <%= f.label :additional_features %><br>
+    <%= f.text_area :additionalfeatures, class: "form-control" %><br>
+  </div>
+ <div class="col-md-4">
+    <%= f.label :private_pool %><br>
+    <%= f.select :private_pool, options_for_select([["YES","YES"],["NO","NO"]]), class: "form-control" %><br>
+  </div>
+  <div class="col-md-4">
+    <%= label_tag :tennis_area %><br>
+    <%= f.select :area_tennis, options_for_select([["YES","YES"],["NO","NO"]]), class: "form-control" %><br>
+  </div>
+  <div class="col-md-4">
+    <%= label_tag :has_wheelchair? %><br>
+    <%= f.select :wheelchair, options_for_select([["YES","YES"],["NO","NO"]]), class: "form-control" %><br>
+  </div>
+   <div class="col-md-4">
+    <%= f.label :elevator %><br>
+    <%= f.select :elevator, options_for_select([["YES","YES"],["NO","NO"]]), class: "form-control" %><br>
+  </div>
+   <div class="col-md-4">
+    <%= f.label :patio_deck %><br>
+    <%= f.select :patio_deck, options_for_select([["YES","YES"],["NO","NO"]]), class: "form-control" %><br>
+  </div>
+   <div class="col-md-4">
+    <%= f.label :energy_features %><br>
+    <%= f.select :energy_features, options_for_select([["YES","YES"],["NO","NO"]]), class: "form-control" %><br>
+  </div>
+   <div class="col-md-4">
+    <%= f.label :green_certification %><br>
+    <%= f.select :green_certification, options_for_select([["YES","YES"],["NO","NO"]]), class: "form-control" %><br>
+  </div>
+   <div class="col-md-4">
+    <%= f.label :golf_course %><br>
+    <%= f.select :golf_course, options_for_select([["YES","YES"],["NO","NO"]]), class: "form-control" %><br>
+  </div>
+   <div class="col-md-4">
+    <%= f.label :water_view %><br>
+    <%= f.select :water_view, options_for_select([["YES","YES"],["NO","NO"]]), class: "form-control" %><br>
+  </div>
+   <div class="col-md-4">
+    <%= f.label :water_front %><br>
+    <%= f.select :water_front, options_for_select([["YES","YES"],["NO","NO"]]), class: "form-control" %><br>
+  </div>
+  <div class="col-md-4">
+    <%= f.label :foreclosure %><br>
+    <%= f.select :foreclosure, options_for_select([["YES","YES"],["NO","NO"]]), class: "form-control" %><br>
+  </div>
+   <div class="col-md-4">
+    <%= f.label :status %><br>
+    <%= f.select :status, options_for_select([["Any Status", "Any Status"],["Active","Active"],["Pending", "Pending"],["Pending Continue to Show", "Pending Continue to Show"],["Sold", "Sold"]]), class: "form-control" %><br>
+  </div>
+  <div class="col-md-4">
+    <%= f.label :Type_of_Construction %><br>
+    <%= f.select :construction_type, options_for_select([["New Construction", "New Construction"],["Renovated","Renovated"],["Needs Renovations", "Needs Renovations"]]), class: "form-control" %><br>
+  </div>
+ 
+  <div class="col-md-4">
+    <%= label_tag :florida_area %><br>
+    <%= f.select :florida_mlsarea, options_for_select([["North Florida", "North_Florida"],["Central Florida","Central_Florida"],["South Florida", "South_Florida"]]), class: "form-control" %><br><br>
+  </div>
+  
+  <br>
+  <div class="col-md-4">
+   <%= label_tag :property_pictures %><br>  <%= f.file_field :image, class: "form-control" %><br><br>
+  </div>
+  <div class="col-md-4">
+    <%= f.submit class: "btn btn-danger" %><br>
+  </div>
+  <br>
+</div>
+</div>
+<% end %>
+</div>

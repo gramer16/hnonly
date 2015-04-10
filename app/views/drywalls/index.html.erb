@@ -1,0 +1,52 @@
+<div class="jumbotron">
+  <div class="left">
+    <%= t('jumbotron_drywalltitle_html') %>
+  
+ </div>
+ </div>
+<div class="left">
+  <%= t('searchservice_html') %>
+   <%= form_tag search_drywalls_path, method: :get do %>
+          <p>
+        <%= text_field :search, params[:search], placeholder: t('searchtextbox'), class: "form-control" %>
+        <br>
+         <%= submit_tag t('searchbtn'), name: nil ,class: "btn btn-success" %>
+      </p>
+    </div>
+  <% end %>
+  
+<div class="thumbnail">
+  <div class="center"> 
+    <div class="row">
+     <% @drywalls.each do |drywall| %>
+      <div class="col-md-3">
+      <div class="thumbnail">
+        <%= link_to image_tag(drywall.image.url), drywall %>
+        <div class="caption">
+          <h4><strong><%= drywall.company_name %></strong></h4>
+          <strong><th><%= label_tag :nil, t('servicecompanywebsite') %></th></strong><br>
+            <%= link_to drywall.company_website, drywall.company_website %><br>
+            <strong><th><%= label_tag :nil, t('servicecompanyphone') %></th></strong><br>
+            <%= drywall.company_phone %><br>
+           <strong><th><%= label_tag :nil, t('servicecompanyaddress') %></th></strong><br>
+           <%= drywall.address %><br> 
+           <strong><th><%= label_tag :nil, t('city') %></th></strong><%= drywall.city %><br>
+           <strong><th><%= label_tag :nil, t('zipcode') %></th></strong><br><%= drywall.zipcode %><br>
+           <br>
+           
+           <td><%= link_to 'Show', drywall, class: "btn btn-success" %></td>
+        
+        <td><%= link_to 'Edit', edit_drywall_path(drywall), class: "btn btn-success" %></td>
+        <td><%= link_to 'Destroy', drywall, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-success" %></td>
+        </div>
+      </div>
+    </div>
+    <% end %>
+    </div>
+
+  </div>
+</div>  
+<% if user_signed_in? && current_user.admin? %>
+<%= link_to t('add_service'), new_drywall_path, class: "btn btn-success" %>
+<% end %>
+

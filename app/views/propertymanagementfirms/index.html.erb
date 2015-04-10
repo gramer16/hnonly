@@ -1,0 +1,58 @@
+<div class="jumbotron">
+  <div class="left">
+    <%= t('jumbotron_propertymanagetitle_html') %>
+  
+ </div>
+ </div>
+ <br>
+
+<div class="left">
+  <%= t('searchservice_html') %>
+   <%= form_tag search_privatefirms_path, method: :get do %>
+          <p>
+        <%= text_field :search, params[:search], placeholder: t('searchtextbox'), class: "form-control" %>
+        <br>
+         <%= submit_tag t('searchbtn'), name: nil ,class: "btn btn-success" %>
+      </p>
+    </div>
+  <% end %>
+
+<div class="thumbnail">
+  <div class="center"> 
+    <div class="row">
+      <% @propertymanagementfirms.each do |propertymanagementfirm| %>
+      <div class="col-md-3">
+      <div class="thumbnail">
+        <%= link_to image_tag(propertymanagementfirm.image.url), propertymanagementfirm %>
+        <div class="caption">
+          <h4><strong><%= propertymanagementfirm.company_name %></strong></h4>
+          <strong><th><%= label_tag :nil, t('servicecompanywebsite') %></th></strong><br>
+            <%= link_to propertymanagementfirm.company_website, propertymanagementfirm.company_website %><br>
+            <strong><th><%= label_tag :nil, t('servicecompanyphone') %></th></strong><br>
+            <%= propertymanagementfirm.company_phone %><br>
+           <strong><th><%= label_tag :nil, t('servicecompanyaddress') %></th></strong><br>
+           <%= propertymanagementfirm.address %><br> 
+           <strong><th><%= label_tag :nil, t('city') %></th></strong><%= propertymanagementfirm.city %><br>
+           <strong><th><%= label_tag :nil, t('zipcode') %></th></strong><br><%= propertymanagementfirm.zipcode %><br>
+           <br>
+           
+           <td><%= link_to 'Show', propertymanagementfirm, class: "btn btn-success" %></td>
+        
+        <td><%= link_to 'Edit', edit_propertymanagementfirm_path(propertymanagementfirm), class: "btn btn-success" %></td>
+        <td><%= link_to 'Destroy', propertymanagementfirm, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-success" %></td>
+        </div>
+      </div>
+    </div>
+    <% end %>
+    </div>
+
+  </div>
+</div> 
+
+
+<br>
+<br>
+
+<% if user_signed_in? && current_user.admin? %>
+<%= link_to t('add_service'), new_propertymanagementfirm_path, class: "btn btn-success" %>
+<% end %>

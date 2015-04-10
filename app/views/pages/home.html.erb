@@ -1,0 +1,42 @@
+<div class="row" id="featuresHeading">
+    <div class="col-12">
+        <%= t('subtitle_html') %>
+    </div>
+</div>
+<div class="row" id="features">
+<div class="col-md-4 feature">
+        <div class="panel">
+            <div class="panel-heading">
+                <%= t('semititle_html') %>
+            </div>
+             <%= image_tag("house.jpg", :size => "150x150", :alt => "Residentials", :style =>"margin-right:25px; margin-top:10px;" ) %>
+            <p></p>
+            <%= link_to t('Purchase_or_Lease'), residentials_path, class: "btn btn-default", data: {no_turbolink: true} %>
+            
+        </div>
+</div>
+
+    <div class="col-md-4 feature">
+        <div class="panel">
+            <div class="panel-heading">
+                <%= t('csemititle_html') %>
+                 
+            </div>
+             <%= image_tag("office.jpg", :size => "150x150", :alt => "Residentials", :style =>"margin-right:25px; margin-top:10px;" ) %>
+            <p></p>
+            <%= link_to t('Purchase_or_Lease'), commercialpropertiesforsales_path, class: "btn btn-default", data: {no_turbolink: true} %>
+        </div>
+    </div>
+<div class="col-md-4 feature">
+        <div class="panel">
+            <div class="panel-heading">
+                 <%= t('ssemititle_html') %>
+                 
+            </div>
+              <%= image_tag("services.jpg", :size => "200x148", :alt => "Residentials", :style =>"margin-right:25px; margin-top:10px;" ) %>
+            <p></p>
+            <%= link_to t('Service'), pages_realestateservices_path, class: "btn btn-default", data: {no_turbolink: true} %>
+        </div>
+        </div>
+</div>
+</div>

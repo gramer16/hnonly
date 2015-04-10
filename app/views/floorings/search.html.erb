@@ -1,0 +1,34 @@
+<%= t('searchresults_html') %>
+<div class="thumbnail">
+  <div class="center"> 
+    <div class="row">
+     <% @floorings.each do |flooring| %>
+      <div class="col-md-3">
+      <div class="thumbnail">
+        <%= link_to image_tag(flooring.image.url), flooring %>
+        <div class="caption">
+          <h4><strong><%= flooring.company_name %></strong></h4>
+          <strong><th><%= label_tag :nil, t('servicecompanywebsite') %></th></strong><br>
+            <%= link_to flooring.company_website, flooring.company_website %><br>
+            <strong><th><%= label_tag :nil, t('servicecompanyphone') %></th></strong><br>
+            <%= flooring.company_phone %><br>
+           <strong><th><%= label_tag :nil, t('servicecompanyaddress') %></th></strong><br>
+           <%= flooring.address %><br> 
+           <strong><th><%= label_tag :nil, t('city') %></th></strong><%= flooring.city %><br>
+           <strong><th><%= label_tag :nil, t('zipcode') %></th></strong><br><%= flooring.zipcode %><br>
+           <br>
+           
+           <td><%= link_to 'Show', flooring, class: "btn btn-success" %></td>
+        
+        <td><%= link_to 'Edit', edit_flooring_path(flooring), class: "btn btn-success" %></td>
+        <td><%= link_to 'Destroy', flooring, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-success" %></td>
+        </div>
+      </div>
+    </div>
+    <% end %>
+    </div>
+
+  </div>
+</div>   
+   
+<%= link_to t('back'), floorings_path, class: "btn btn-link"  %>

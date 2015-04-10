@@ -1,0 +1,57 @@
+<div class="jumbotron">
+  <div class="left">
+    <%= t('jumbotron_titletitle_html') %>
+  
+ </div>
+ </div>
+ <br>
+<div class="left">
+  <%= t('searchservice_html') %>
+   <%= form_tag search_titlecompanies_path, method: :get do %>
+          <p>
+        <%= text_field :search, params[:search], placeholder: t('searchtextbox'), class: "form-control" %>
+        <br>
+         <%= submit_tag t('searchbtn'), name: nil ,class: "btn btn-success" %>
+      </p>
+    </div>
+  <% end %>
+
+<div class="thumbnail">
+  <div class="center"> 
+    <div class="row">
+       <% @titlecompanies.each do |titlecompany| %>
+      <div class="col-md-3">
+      <div class="thumbnail">
+        <%= link_to image_tag(titlecompany.image.url), titlecompany %>
+        <div class="caption">
+          <h4><strong><%= titlecompany.company_name %></strong></h4>
+          <strong><th><%= label_tag :nil, t('servicecompanywebsite') %></th></strong><br>
+            <%= link_to titlecompany.company_website, titlecompany.company_website %><br>
+            <strong><th><%= label_tag :nil, t('servicecompanyphone') %></th></strong><br>
+            <%= titlecompany.company_phone %><br>
+           <strong><th><%= label_tag :nil, t('servicecompanyaddress') %></th></strong><br>
+           <%= titlecompany.address %><br> 
+           <strong><th><%= label_tag :nil, t('city') %></th></strong><%= titlecompany.city %><br>
+           <strong><th><%= label_tag :nil, t('zipcode') %></th></strong><br><%= titlecompany.zipcode %><br>
+           <br>
+           
+           <td><%= link_to 'Show', titlecompany, class: "btn btn-success" %></td>
+        
+        <td><%= link_to 'Edit', edit_titlecompany_path(titlecompany), class: "btn btn-success" %></td>
+        <td><%= link_to 'Destroy',titlecompany, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-success" %></td>
+        </div>
+      </div>
+    </div>
+    <% end %>
+    </div>
+
+  </div>
+</div> 
+
+
+<br>
+<br>
+
+
+<%= link_to t('add_service'), new_titlecompany_path, class: "btn btn-success" %>
+

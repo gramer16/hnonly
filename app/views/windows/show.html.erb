@@ -1,0 +1,54 @@
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="thumbnail">
+       <%= image_tag @window.image.url %>
+       <br> 
+      <strong><%= @window.company_name %></strong>
+      <br>
+      <br>
+      <strong><%= label_tag :nil, t('servicecompanywebsite') %></strong>  
+      <%= link_to @window.company_website, @window.company_website %><br>
+      
+      
+      <strong><%= label_tag :nil, t('companycontactname') %></strong>  
+     <%= @window.contact_name %>
+     <br>
+      <strong><%= label_tag :nil, t('companyservicephone') %></strong> 
+     <%= @window.company_phone %><br>
+     <strong><%= label_tag :nil, t('servicecompanyaddress') %></strong>  
+     <%= @window.address %><br>
+      <strong><%= label_tag :nil, t('city') %></strong>  
+     <%= @window.city %><br>
+     <strong><%= label_tag :nil, t('zipcode') %></strong>  
+     <%= @window.zipcode %><br>
+    </div>
+     <br>
+
+  </div>
+  <div class="col-md-6">
+    <h5><strong><%= label_tag :nil, t('generalcompany') %></strong></h5>
+    <%= @window.company_description %>
+  </div>
+
+</div>
+
+  <div class ="col-md-12">
+    <div class= "center">
+   <strong><%= label_tag :nil, t('mapview') %></strong><br>
+   <br>
+<iframe
+  width="800"
+  height="450"
+  frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAUOQ0h7ZYU56FuY9ziMMXURoIlHxC3pfY
+    &q=<%= @window.address.parameterize %>">
+</iframe>
+
+</div>
+<br>
+<br>  
+ </div>
+
+<%= link_to 'Edit', edit_window_path(@window), class: "btn btn-link" %> |
+<%= link_to t('back'), windows_path, class: "btn btn-link" %>

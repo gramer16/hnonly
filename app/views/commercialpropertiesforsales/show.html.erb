@@ -1,0 +1,146 @@
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="thumbnail">
+      <%= image_tag @commercialpropertiesforsale.image.url %>
+      <br>
+      <strong>Property Description:</strong>  
+      <%= @commercialpropertiesforsale.property_description %>
+      <br>
+      <br>
+      <h5><strong>Area Information</strong></h5>
+      <br>
+      </div>
+
+      <br>
+  </div>
+  
+  <div class="col-md-6">
+    
+    <h4><strong>General Property Features</strong></h4>
+    <h5><strong><%= @commercialpropertiesforsale.address %></strong></h5>
+    <h5> <strong>Price:</strong> <%= number_to_currency(@commercialpropertiesforsale.price) %></h5>
+    <div class ="col-md-6">
+     <strong>Property for:</strong>  
+     <%= @commercialpropertiesforsale.action %>
+   </div>
+    <div class ="col-md-6">
+     <strong>Status:</strong>  
+     <%= @commercialpropertiesforsale.status %>
+   </div>
+   <div class ="col-md-6">
+     <strong>City:</strong>  
+    <%= @commercialpropertiesforsale.city %>
+  </div>
+  <div class ="col-md-6">
+     <strong>Zipcode:</strong>  
+   <%= @commercialpropertiesforsale.zipcode %>
+  </div>
+  <div class ="col-md-6">
+     <strong>Type of Property:</strong>  
+   <%= @commercialpropertiesforsale.property_type %>
+  </div>
+  <div class ="col-md-6">
+     <strong>Real Estate Company:</strong>  
+    <%= @commercialpropertiesforsale.realestatecompany %>
+  </div>
+  <div class ="col-md-6">
+     <strong>Office Phone:</strong>  
+     <%= @commercialpropertiesforsale.officephone %>
+  </div>
+  <div class ="col-md-6">
+     <strong>Real Estate Company Website:</strong>  
+     <%= @commercialpropertiesforsale.companywebsite %>
+  </div>
+  <div class ="col-md-6">
+     <strong>Listing Agent:</strong>  
+     <%= @commercialpropertiesforsale.listingagent %>
+  </div>
+    <div class ="col-md-6">
+     <strong>Agent Email:</strong>  
+     <%= @commercialpropertiesforsale.emailagent %>
+  </div>
+  <div class ="col-md-6">
+     <strong>Agent Phone:</strong>  
+     <%= @commercialpropertiesforsale.agentphone %>
+  </div>
+ <div class ="col-md-6">
+     <strong>Total Building SQFT:</strong>  
+     <%= @commercialpropertiesforsale.totalbuildingSF %>
+  </div>
+  <div class ="col-md-6">
+     <strong>MLS#:</strong>  
+     <%= @commercialpropertiesforsale.mls_number %>
+  </div>
+  <div class ="col-md-6">
+     <strong>Total of Suites or Units:</strong>  
+      <%= @commercialpropertiesforsale.totalunits %>
+  </div>
+  <div class ="col-md-6">
+     <strong>Total of Floors:</strong>  
+      <%= @commercialpropertiesforsale.floorsnumber %>
+  </div>
+  <div class ="col-md-6">
+     <strong>Type of Construction:</strong>  
+       <%= @commercialpropertiesforsale.construction_type %>
+  </div>
+ <div class ="col-md-6">
+     <strong>Total Parking:</strong>  
+        <%= @commercialpropertiesforsale.parking_total %>
+  </div>
+ <div class ="col-md-6">
+     <strong>Total of Elevators:</strong>  
+        <%= @commercialpropertiesforsale.elevators %>
+  </div>
+  <div class ="col-md-6">
+     <strong>Individual Suite SQFT:</strong>  
+         <%= @commercialpropertiesforsale.individual_suiteSQF %>
+  </div>
+  <div class ="col-md-6">
+     <strong>Built Year:</strong>  
+         <%= @commercialpropertiesforsale.year_completed %>
+  </div>
+  <div class ="col-md-6">
+     <strong>Lot SQFT:</strong>  
+        <%= @commercialpropertiesforsale.lotsqft %>
+  </div>
+
+</div>
+  <br>
+    <br>
+   <div class ="col-md-12">
+    <div class= "center">
+   <strong>Map View Location:</strong><br>
+   <br>
+<iframe
+  width="800"
+  height="450"
+  frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAUOQ0h7ZYU56FuY9ziMMXURoIlHxC3pfY
+    &q=<%= @commercialpropertiesforsale.address.parameterize %>">
+</iframe>
+
+</div>
+<br>
+<br>  
+ </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<% if current_user == @commercialpropertiesforsale.user %>
+<%= link_to 'Edit', edit_commercialpropertiesforsale_path(@commercialpropertiesforsale), class: "btn btn-link"  %> 
+<% end %>|
+<%= link_to 'Back', commercialpropertiesforsales_path, class: "btn btn-link"  %>

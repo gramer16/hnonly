@@ -1,0 +1,65 @@
+<div class="row">
+  <div class="col-md-6">
+    <div class="thumbnail">
+       <%= image_tag @arquitect.image.url %>
+       <br> 
+      <strong><%= @arquitect.company_name %></strong>
+      <br>
+      <br>
+      <strong><%= label_tag :nil, t('servicecompanywebsite') %></strong>  
+      <%= link_to @arquitect.company_website, @arquitect.company_website, :target => "_blank" %><br>
+      
+      
+      <strong><%= label_tag :nil, t('companycontactname') %></strong>  
+     <%= @arquitect.contact_name %>
+     <br>
+      <strong><%= label_tag :nil, t('companyservicephone') %></strong> 
+     <%= @arquitect.company_phone %><br>
+     <strong><%= label_tag :nil, t('servicecompanyaddress') %></strong>  
+     <%= @arquitect.address %><br>
+      <strong><%= label_tag :nil, t('city') %></strong>  
+     <%= @arquitect.city %><br>
+     <strong><%= label_tag :nil, t('zipcode') %></strong>  
+     <%= @arquitect.zipcode %><br>
+    </div>
+     <br>
+
+  </div>
+  <div class="col-md-6">
+    <h5><strong><%= label_tag :nil, t('generalcompany') %></strong></h5>
+    <%= @arquitect.company_description %>
+  </div>
+
+</div>
+
+  <div class ="col-md-12">
+    <div class= "center">
+   <strong><%= label_tag :nil, t('mapview') %></strong><br>
+   <br>
+<iframe
+  width="800"
+  height="450"
+  frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAUOQ0h7ZYU56FuY9ziMMXURoIlHxC3pfY
+    &q=<%= @arquitect.address.parameterize %>">
+</iframe>
+
+</div>
+<br>
+<br>  
+ </div>
+
+
+      
+      
+     
+
+
+
+ <% if user_signed_in? && current_user.admin? %>
+<%= link_to 'Edit', edit_arquitect_path(@arquitect), class: "btn btn-link" %>
+ <% end %> |
+<%= link_to t('back'), arquitects_path, class: "btn btn-link" %>
+
+
+

@@ -1,0 +1,41 @@
+<h4><strong>Search Results:</strong></h4><br>
+<div class="row">
+  <% @residentials.each do |residential| %>
+  <div class="col-md-3">
+    <div class="thumbnail">
+      <%= image_tag residential.image.url %>
+      <div class="caption">
+        <h3><strong><%= residential.address %></strong></h3>
+          <h4><strong><th>Price: </th> <%= number_to_currency(residential.price) %></strong></h4>
+          <p>
+            <%= residential.property_type %><br>
+            <th>Bedrooms:  </th>   <%= residential.bedrooms %><br>
+            <th>Full Bathrooms: </th>   <%= residential.full_bathrooms %><br>
+            <th>Half Bathrooms: </th>   <%= residential.half_bathrooms %><br>
+            <th>Square Feet: </th> <%= residential.square_feet %><br>
+            <th>Zip Code: </th>    <%= residential.zip_code %><br>
+             <th>Construction Type: </th> <%= residential.construction_type %><br>
+             <th>City: </th> <%= residential.city %><br>
+             <th>Florida MLS Area: </th> <%= residential.florida_mlsarea %><br>
+            <th>Private Pool: </th>    <%= residential.private_pool %><br>
+            <th>Water View: </th> <%= residential.water_view %><br>
+            <th>Golf Course: </th> <%= residential.golf_course %><br>
+            <th>Water Front: </th> <%= residential.water_front %><br>
+           
+            <th>Status: </th> <%= residential.status %><br>
+
+          </p>
+          <%= link_to 'Show', residential, class: "btn btn-link"  %>
+          <%= link_to 'Edit', edit_residential_path(residential), class: "btn btn-link" %>
+          <%= link_to 'Destroy', residential, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %>
+
+ </div>
+    </div>
+  </div>
+  <% end %>
+</div>
+</div>
+<br>
+<%= link_to 'Back', residentials_path, class: "btn btn-link" %>
+
+<br>

@@ -1,0 +1,64 @@
+<div class="jumbotron">
+  <div class="left">
+    <h2>Sign up to Ontario's Only</h2>
+  </div>
+</div>
+<br>
+<br>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= devise_error_messages! %>
+    <div class="left">
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-6">
+            <%= f.label :name %>
+            <%= f.text_field :name, :autofocus => true, class: "form-control" %>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-4">
+            <%= f.label :email %>
+            <%= f.email_field :email, class: "form-control" %>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-4">
+            <%= f.label :password %>
+            <% if @validatable %><i>(<%= @minimum_password_length %> characters minimum)</i>
+            <% end %><br/>
+            <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-4">
+            <%= f.label :password_confirmation %><br/>
+            <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-4">
+            Are you a realtor? <%= f.check_box :isRealtor %><br/>
+            <br/>
+            <%= f.label :licenseId, "Realtor License Id:" %><br/>
+            <%= f.text_field :licenseId, autocomplete: "off", class: "form-control" %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="left">
+      <div class="form-group">
+        <%= f.submit "Sign up", class: "btn btn-warning" %>
+      </div>
+    </div>
+<% end %>
+<div class="left">
+  <%= render "devise/shared/links" %>
+</div>

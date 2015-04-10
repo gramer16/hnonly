@@ -1,0 +1,42 @@
+<h4><strong>Search Results:</strong></h4><br>
+<div class="row">
+    <% @commercialpropertiesforsales.each do |commercialpropertiesforsale| %>
+    <div class="col-md-3">
+    <div class="thumbnail">
+      <%= link_to image_tag(commercialpropertiesforsale.image.url), commercialpropertiesforsale %>
+    <div class="caption">
+      <h3><strong><%= commercialpropertiesforsale.address %></strong></h3>
+      <h4><strong><th>Price: </th> <%= number_to_currency(commercialpropertiesforsale.price) %></strong></h4>
+      <p>
+        <p><%= "Listed by: #{commercialpropertiesforsale.user.name}" %></p>
+        <th>Property type: </th> <%= commercialpropertiesforsale.property_type %><br>
+        <th>Property for: </th> <%= commercialpropertiesforsale.action %><br>
+        <th>City: </th> <%= commercialpropertiesforsale.city %><br>
+        <th>Zipcode: </th> <%= commercialpropertiesforsale.zipcode %><br>
+        <th>Real Estate Company: </th> <%= commercialpropertiesforsale.realestatecompany %><br>
+        <th>Office Phone: </th> <%= commercialpropertiesforsale.officephone %><br>
+        <th>Company website: </th> <%= commercialpropertiesforsale.companywebsite %><br>
+         <th>Co-Listing Agent: </th> <%= commercialpropertiesforsale.listingagent %><br>
+         <th>Co-Listing Agent: </th> <%= commercialpropertiesforsale.emailagent %><br>
+         <th>Agent Phone: </th> <%= commercialpropertiesforsale.agentphone %><br>
+          <th>Total Building Square Feet: </th> <%= commercialpropertiesforsale.totalbuildingSF %><br>
+          <th>Total Units or Suites: </th> <%= commercialpropertiesforsale.totalunits %><br>
+          <th>Floor Number: </th> <%= commercialpropertiesforsale.floorsnumber %><br>
+          <th>Property Description Details: </th> <%= commercialpropertiesforsale.property_description %><br>
+          <th>Type of Construction: </th> <%= commercialpropertiesforsale.construction_type %>
+      </p>
+        <td><%= link_to 'Show', commercialpropertiesforsale, class: "btn btn-warning" %></td>
+        <% if (user_signed_in?) && (current_user == commercialpropertiesforsale.user) %>
+        <td><%= link_to 'Edit', edit_commercialpropertiesforsale_path(commercialpropertiesforsale), class: "btn btn-warning" %></td>
+        <td><%= link_to 'Destroy', commercialpropertiesforsale, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-warning" %></td>
+         <% end %>
+    </div>
+  </div>
+</div>
+    <% end %>
+  </div>
+</div>
+</div>
+<div class="left">
+<%= link_to 'Back', commercialpropertiesforsales_path %>
+ </div>

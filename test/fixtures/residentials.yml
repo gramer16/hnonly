@@ -1,0 +1,63 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  mls_number: MyString
+  action: MyString
+  address: MyText
+  property_type: MyString
+  bedrooms: 1
+  full_bathrooms: 1
+  half_bathrooms: 1
+  square_feet: 1
+  price: 9.99
+  zip_code: 1
+  lot_size: 1
+  garage: 1
+  construction_type: MyString
+  stories: 1
+  year_built: 1
+  private_pool: MyString
+  area_tennis: MyString
+  wheelchair: MyString
+  elevator: MyString
+  patio_deck: MyString
+  energy_features: MyString
+  green_certification: MyString
+  golf_course: MyString
+  water_view: MyString
+  water_front: MyString
+  foreclosure: MyString
+  status: MyString
+  city: MyString
+  florida_mlsarea: MyString
+
+two:
+  mls_number: MyString
+  action: MyString
+  address: MyText
+  property_type: MyString
+  bedrooms: 1
+  full_bathrooms: 1
+  half_bathrooms: 1
+  square_feet: 1
+  price: 9.99
+  zip_code: 1
+  lot_size: 1
+  garage: 1
+  construction_type: MyString
+  stories: 1
+  year_built: 1
+  private_pool: MyString
+  area_tennis: MyString
+  wheelchair: MyString
+  elevator: MyString
+  patio_deck: MyString
+  energy_features: MyString
+  green_certification: MyString
+  golf_course: MyString
+  water_view: MyString
+  water_front: MyString
+  foreclosure: MyString
+  status: MyString
+  city: MyString
+  florida_mlsarea: MyString

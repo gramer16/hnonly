@@ -1,0 +1,2 @@
+module LandscapingsHelper
+end

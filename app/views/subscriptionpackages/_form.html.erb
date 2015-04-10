@@ -1,0 +1,67 @@
+<%= form_for(@subscriptionpackage,:html => { :multipart => true }) do |f| %>
+  <% if @subscriptionpackage.errors.any? %>
+    <div id="error_explanation" class="alert alert-danger alert-dismissable">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      
+      <h2><%= pluralize(@subscriptionpackage.errors.count, "error") %> prohibited this subscriptionpackage from being saved:</h2>
+
+      <ul>
+      <% @subscriptionpackage.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+   <div class="thumbnail">
+  <div class="field">
+    <div class="left">
+    <%= label_tag :nil, "PROPERTY LISTING SUBSCRIPTIONS" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="row">
+      <div class="left">
+       <div class="col-md-4">
+     <%= label_tag :nil, "Subscription Title:" %>
+      <%= f.text_field :package_title, class: "form-control"  %><br>
+      </div>
+      <div class="col-md-4">
+      <%= label_tag :nil, "Listing Subscription Name:" %>
+      <%= f.text_field :package_name, class: "form-control"  %><br>
+      </div>
+      <div class="col-md-4">
+      <%= label_tag :nil, "Description" %>
+      <%= f.text_area :package_description, class: "form-control"  %><br>
+      </div>
+      </div>
+    </div>
+  </div>
+    <div class="form-group">
+    <div class="row">
+      <div class="left">
+       <div class="col-md-4">
+      <%= label_tag :nil, "Price" %>
+      <%= f.text_field :price1, class: "form-control"  %><br>
+      </div>
+      <div class="col-md-4">
+      <%= label_tag :nil, "Additional Comments" %>
+      <%= f.text_area :features_include , class: "form-control"  %><br>
+    </div>
+     <div class="col-md-4">
+    <%= f.label :pictures %>  <%= f.file_field :image, class: "form-control" %>
+    </div>
+  </div>
+    </div>
+  </div>
+  <div id="stripe_error" class="alert alert-danger" style="display:none">
+    <noscript>JavaScript is not enabled and is required for this form. First enable it in your web browser settings.</noscript>
+  </div>
+</div>
+ <div class="form-group">
+  <div class="left">
+    <%= f.submit "Subscribe", class: "btn btn-warning", data: { no_turbolink: true } %>
+  </div>
+</div>
+<% end %>
+ 

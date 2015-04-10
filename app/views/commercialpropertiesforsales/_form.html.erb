@@ -1,0 +1,144 @@
+
+<%= form_for(@commercialpropertiesforsale, :html => { :multipart => true }) do |f| %>
+  <% if @commercialpropertiesforsale.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@commercialpropertiesforsale.errors.count, "error") %> prohibited this commercialpropertiesforsale from being saved:</h2>
+
+      <ul>
+      <% @commercialpropertiesforsale.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+ <div class="thumbnail">
+  
+ <div class="row">
+  <div class="left">
+    <div class="col-md-4">
+   <%= label_tag :mls_number %><br>
+    <%= f.text_field :mls_number, class: "form-control"  %><br>
+  </div>
+  <div class="col-md-4">
+    <%= label_tag :property_for %><br>
+    <%= f.select :action, options_for_select([["Choose", "Choose"],["Sale", "Sale"],["For sale but with Lease Option","Lease"]]), class: "form-control" %><br>
+  </div>
+  <div class="col-md-4">
+    <%= label_tag :address %><br>
+    <%= f.text_area :address, class: "form-control" %><br>
+  </div>
+  <div class="col-md-4">
+    <%= label_tag :type_of_property %><br>
+    <%= f.select :property_type, options_for_select([["Office","Office"],["Industrial","Industrial"],["Retail","Retail"],["Land","Land"],["Multi-Family","Multi Family"], ["Healthcare","Healthcare"], ["Development Opportunity","Development Opportunity"], ["Flex Space","Flex Space"], ["Mixed Use","Mixed Use"], ["Special Purpose","Special Purpose"]]), class: "form-control" %><br>
+  </div>
+  <div class="col-md-4">
+    <%= label_tag :zip_code %><br>
+    <%= f.number_field :zipcode, class: "form-control" %><br>
+  </div>
+  <div class="col-md-4">
+    <%= label_tag :city %><br>
+    <%= f.text_field :city, class: "form-control" %><br>
+  </div>
+  <div class="col-md-4">
+    <%= label_tag :price %><br>
+    <%= f.text_field :price, class: "form-control" %><br>
+  </div>
+   <div class="col-md-4">
+    <%= label_tag :real_estate_company_name %><br>
+    <%= f.text_field :realestatecompany, class: "form-control" %><br>
+  </div>
+   <div class="col-md-4">
+    <%= label_tag :office_phone %><br>
+    <%= f.text_field :officephone, class: "form-control" %><br>
+  </div>
+   <div class="col-md-4">
+    <%= label_tag :company_website %><br>
+    <%= f.text_field :companywebsite, class: "form-control" %><br>
+  </div>
+
+    <div class="col-md-4">
+   <%= label_tag :listing_agent_name %><br>
+    <%= f.text_field :listingagent, class: "form-control" %><br>
+    </div>
+     <div class="col-md-4">
+   <%= label_tag :email %><br>
+    <%= f.text_field :emailagent, class: "form-control" %><br>
+    </div>
+     <div class="col-md-4">
+    <%= label_tag :agent_phone %><br>
+    <%= f.text_field :agentphone, class: "form-control" %><br>
+    </div>
+      <div class="col-md-4">
+    <%= label_tag :asset_class %><br>
+    <%= f.text_field :assetclass, class: "form-control" %><br>
+    </div>
+    <div class="col-md-4">
+    <%= label_tag :total_Sqft_building %><br>
+    <%= f.number_field :totalbuildingSF, class: "form-control" %><br>
+  </div>
+  <div class="col-md-4">
+    <%= label_tag :total_units %><br>
+    <%= f.number_field :totalunits, class: "form-control" %><br>
+  </div>
+ <div class="col-md-4">
+    <%= label_tag :cap_rate %><br>
+    <%= f.text_field :cap_rate, class: "form-control" %><br>
+  </div>
+  <div class="col-md-4">
+    <%= label_tag :number_of_floors %><br>
+    <%= f.number_field :floorsnumber, class: "form-control" %><br>
+  </div>
+  <div class="col-md-4">
+    <%= f.label :Type_of_Construction %><br>
+    <%= f.select :construction_type, options_for_select([["New Construction", "New Construction"],["Renovated","Renovated"],["Needs Renovations", "Needs Renovations"]]), class: "form-control" %><br>
+  </div>
+  
+ <div class="col-md-4">
+    <%= f.label :property_description %><br>
+    <%= f.text_area :property_description, class: "form-control" %><br>
+  </div>
+  <div class="col-md-4">
+    <%= label_tag :total_of_parking %><br>
+    <%= f.number_field :parking_total, class: "form-control" %><br>
+  </div>
+   <div class="col-md-4">
+    <%= label_tag :elevators %><br>
+    <%= f.text_field :elevators, class: "form-control" %><br>
+  </div>
+  <div class="col-md-4">
+    <%= label_tag :Suite_sqft %><br>
+    <%= f.number_field :individual_suiteSQF, class: "form-control" %><br>
+  </div>
+   <div class="col-md-4">
+    <%= f.label :year_completed %><br>
+    <%= f.number_field :year_completed, class: "form-control" %><br>
+  </div>
+   <div class="col-md-4">
+    <%= label_tag :lot_sqft %><br>
+    <%= f.number_field :lotsqft, class: "form-control" %><br>
+  </div>
+   <div class="col-md-4">
+    <%= f.label :status %><br>
+    <%= f.select :status, options_for_select([["Any Status", "Any Status"],["Active","Active"],["Pending", "Pending"],["Pending Continue to Show", "Pending Continue to Show"],["Sold", "Sold"]]), class: "form-control" %><br>
+  </div>
+  
+  <div class="col-md-4">
+    <%= label_tag :florida_area %><br>
+    <%= f.select :floridarea, options_for_select([["North Florida", "North_Florida"],["Central Florida","Central_Florida"],["South Florida", "South_Florida"]]), class: "form-control" %><br><br>
+  </div>
+  
+  <br>
+  <div class="col-md-4">
+    <%= f.label :property_pictures %>  <%= f.file_field :image, class: "form-control" %><br><br>
+  </div>
+
+  <div class="col-md-4">
+    <%= f.submit "Create Commercial", class: "btn btn-warning"  %><br>
+  </div>
+  </div>
+</div>
+  <br>
+<% end %>
+</div>
+

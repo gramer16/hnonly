@@ -1,0 +1,37 @@
+<%= t('searchresults_html') %>
+<div class="thumbnail">
+  <div class="center"> 
+    <div class="row">
+     <% @customcabinets.each do |customcabinet| %>
+      <div class="col-md-3">
+      <div class="thumbnail">
+        <%= link_to image_tag(customcabinet.image.url), customcabinet %>
+        <div class="caption">
+          <h4><strong><%= customcabinet.company_name %></strong></h4>
+          <strong><th><%= label_tag :nil, t('servicecompanywebsite') %></th></strong><br>
+            <%= link_to customcabinet.company_website, customcabinet.company_website %><br>
+            <strong><th><%= label_tag :nil, t('servicecompanyphone') %></th></strong><br>
+            <%= customcabinet.company_phone %><br>
+           <strong><th><%= label_tag :nil, t('servicecompanyaddress') %></th></strong><br>
+           <%= customcabinet.address %><br> 
+           <strong><th><%= label_tag :nil, t('city') %></th></strong><%= customcabinet.city %><br>
+           <strong><th><%= label_tag :nil, t('zipcode') %></th></strong><br><%= customcabinet.zipcode %><br>
+           <br>
+           
+           <td><%= link_to 'Show', customcabinet, class: "btn btn-success" %></td>
+        
+        <td><%= link_to 'Edit', edit_customcabinet_path(customcabinet), class: "btn btn-success" %></td>
+        <td><%= link_to 'Destroy', customcabinet, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-success" %></td>
+        </div>
+      </div>
+    </div>
+    <% end %>
+    </div>
+
+  </div>
+</div>               
+   
+
+<br>
+<br>
+<%= link_to t('back'), customcabinets_path, class: "btn btn-link"  %>

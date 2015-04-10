@@ -1,0 +1,57 @@
+
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="thumbnail">
+       <%= image_tag @interiordesigner.image.url %>
+       <br> 
+      <strong><%= @interiordesigner.company_name %></strong>
+      <br>
+      <br>
+      <strong><%= label_tag :nil, t('servicecompanywebsite') %></strong>  
+      <%= link_to @interiordesigner.company_website, @interiordesigner.company_website %><br>
+      
+      
+      <strong><%= label_tag :nil, t('companycontactname') %></strong>  
+     <%= @interiordesigner.contact_name %>
+     <br>
+      <strong><%= label_tag :nil, t('companyservicephone') %></strong> 
+     <%= @interiordesigner.company_phone %><br>
+     <strong><%= label_tag :nil, t('servicecompanyaddress') %></strong>  
+     <%= @interiordesigner.address %><br>
+      <strong><%= label_tag :nil, t('city') %></strong>  
+     <%= @interiordesigner.city %><br>
+     <strong><%= label_tag :nil, t('zipcode') %></strong>  
+     <%= @interiordesigner.zipcode %><br>
+    </div>
+     <br>
+
+  </div>
+  <div class="col-md-6">
+    <h5><strong><%= label_tag :nil, t('generalcompany') %></strong></h5>
+    <%= @interiordesigner.company_description %>
+  </div>
+
+</div>
+
+  <div class ="col-md-12">
+    <div class= "center">
+   <strong><%= label_tag :nil, t('mapview') %></strong><br>
+   <br>
+<iframe
+  width="800"
+  height="450"
+  frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAUOQ0h7ZYU56FuY9ziMMXURoIlHxC3pfY
+    &q=<%= @interiordesigner.address.parameterize %>">
+</iframe>
+
+</div>
+<br>
+<br>  
+ </div>
+
+<%= link_to 'Edit', edit_interiordesigner_path(@interiordesigner), class: "btn btn-link" %> |
+<%= link_to t('back'), interiordesigners_path, class: "btn btn-link" %>
+
+

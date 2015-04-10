@@ -1,0 +1,2 @@
+module MoldsHelper
+end

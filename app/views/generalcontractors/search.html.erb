@@ -1,0 +1,34 @@
+<%= t('searchresults_html') %>
+<div class="thumbnail">
+  <div class="center"> 
+    <div class="row">
+     <% @generalcontractors.each do |generalcontractor| %>
+      <div class="col-md-3">
+      <div class="thumbnail">
+        <%= link_to image_tag(generalcontractor.image.url), generalcontractor %>
+        <div class="caption">
+          <h4><strong><%= generalcontractor.company_name %></strong></h4>
+          <strong><th><%= label_tag :nil, t('servicecompanywebsite') %></th></strong><br>
+            <%= link_to generalcontractor.company_website, generalcontractor.company_website %><br>
+            <strong><th><%= label_tag :nil, t('servicecompanyphone') %></th></strong><br>
+            <%= generalcontractor.company_phone %><br>
+           <strong><th><%= label_tag :nil, t('servicecompanyaddress') %></th></strong><br>
+           <%= generalcontractor.address %><br> 
+           <strong><th><%= label_tag :nil, t('city') %></th></strong><%= generalcontractor.city %><br>
+           <strong><th><%= label_tag :nil, t('zipcode') %></th></strong><br><%= generalcontractor.zipcode %><br>
+           <br>
+           
+           <td><%= link_to 'Show', generalcontractor, class: "btn btn-success" %></td>
+        
+        <td><%= link_to 'Edit', edit_generalcontractor_path(generalcontractor), class: "btn btn-success" %></td>
+        <td><%= link_to 'Destroy', generalcontractor, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-success" %></td>
+        </div>
+      </div>
+    </div>
+    <% end %>
+    </div>
+
+  </div>
+</div>   
+   
+<%= link_to t('back'), generalcontractors_path, class: "btn btn-link"  %>

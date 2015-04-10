@@ -1,0 +1,53 @@
+<div class="row">
+  <div class="col-md-6">
+    <div class="thumbnail">
+       <%= image_tag @mortgage.image.url %>
+       <br> 
+      <strong><%= @mortgage.company_name %></strong>
+      <br>
+      <br>
+      <strong><%= label_tag :nil, t('servicecompanywebsite') %></strong>  
+      <%= link_to @mortgage.company_website, @mortgage.company_website %><br>
+      
+      
+      <strong><%= label_tag :nil, t('companycontactname') %></strong>  
+     <%= @mortgage.contact_name %>
+     <br>
+      <strong><%= label_tag :nil, t('companyservicephone') %></strong> 
+     <%= @mortgage.company_phone %><br>
+     <strong><%= label_tag :nil, t('servicecompanyaddress') %></strong>  
+     <%= @mortgage.address %><br>
+      <strong><%= label_tag :nil, t('city') %></strong>  
+     <%= @mortgage.city %><br>
+     <strong><%= label_tag :nil, t('zipcode') %></strong>  
+     <%= @mortgage.zipcode %><br>
+    </div>
+     <br>
+
+  </div>
+  <div class="col-md-6">
+    <h5><strong><%= label_tag :nil, t('generalcompany') %></strong></h5>
+    <%= @mortgage.company_description %>
+  </div>
+
+</div>
+
+  <div class ="col-md-12">
+    <div class= "center">
+   <strong><%= label_tag :nil, t('mapview') %></strong><br>
+   <br>
+<iframe
+  width="800"
+  height="450"
+  frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAUOQ0h7ZYU56FuY9ziMMXURoIlHxC3pfY
+    &q=<%= @mortgage.address.parameterize %>">
+</iframe>
+
+</div>
+<br>
+<br>  
+ </div>
+
+<%= link_to 'Edit', edit_mortgage_path(@mortgage), class: "btn btn-link" %> |
+<%= link_to t('back'), mortgages_path, class: "btn btn-link" %>

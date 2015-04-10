@@ -1,0 +1,195 @@
+
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="thumbnail">
+      <%= image_tag @residential.image.url %>
+      <br>
+      <strong>Property Features:</strong>  
+      <%= @residential.additionalfeatures %>
+      <br>
+      <br>
+      <h5><strong>School Information</strong></h5>
+      <br>
+      </div>
+
+      <br>
+  </div>
+  <div class="col-md-6">
+    <h4><strong>General Description</strong></h4>
+    <h5><strong><%= @residential.address %></strong></h5>
+    <h5> <strong>Listing Price:</strong> <%= number_to_currency(@residential.price) %></h5>
+    <div class ="col-md-6">
+     <strong>Status:</strong>  
+     <%= @residential.status %>
+   </div>
+    <div class ="col-md-6">
+     <strong>City:</strong>  
+    <%= @residential.city %>
+  </div>
+   <div class ="col-md-6">
+    <strong>Zip code:</strong>  
+    <%= @residential.zip_code %>
+  </div>
+   <div class ="col-md-6">
+    <strong>Property type:</strong>  
+   <%= @residential.property_type %>
+ </div>
+  <div class ="col-md-6">
+   <strong>Bedrooms:</strong> 
+  <%= @residential.bedrooms %>
+</div>
+ <div class ="col-md-6">
+  <strong>Full bathrooms:</strong> 
+  <%= @residential.full_bathrooms %>
+</div>
+ <div class ="col-md-6">
+  <strong>Half bathrooms:</strong> 
+  <%= @residential.half_bathrooms %>
+</div>
+ <div class ="col-md-6">
+  <strong>Square feet:</strong>  
+  <%= @residential.square_feet %>
+</div>
+ <div class ="col-md-6">
+  <strong>Lot size:</strong>  
+   <%= @residential.lot_size %>
+ </div>
+  <div class ="col-md-6">
+   <strong>Garage:</strong>  
+  <%= @residential.garage %>
+</div>
+ <div class ="col-md-6">
+  <strong>Stories:</strong>  
+  <%= @residential.stories %>
+</div>
+ <div class ="col-md-6">
+  <strong>Year built:</strong>  
+  <%= @residential.year_built %>
+</div>
+ <div class ="col-md-6">
+  <strong>Construction type:</strong>  
+  <%= @residential.construction_type %>
+</div>
+ <div class ="col-md-6">
+  <strong>Maintenance Fee:</strong>  
+  <%= @residential.maintenancefee %>
+</div>
+ <div class ="col-md-6">
+  <strong>Key Map:</strong>  
+  <%= @residential.keymap %>
+</div>
+ <div class ="col-md-6">
+   <strong>For Sale / Rent:</strong> 
+  <%= @residential.action %>
+</div>
+ <div class ="col-md-6">
+   <strong>Mls number:</strong>  
+  <%= @residential.mls_number %> 
+</div>
+<div class ="col-md-6">
+  <strong>Is a Foreclosure?:</strong>  
+  <%= @residential.foreclosure %>
+</div>
+</div>
+ <br>
+<br>
+<div class ="col-md-6">
+ <h4><strong>Exterior Features</strong></h4>
+ <div class ="col-md-6">
+      <strong>Private pool:</strong>  
+      <%= @residential.private_pool %>
+   </div>
+   <div class ="col-md-6">
+      <strong>Area tennis:</strong>  
+    <%= @residential.area_tennis %>
+   </div>
+   <div class ="col-md-6">
+      <strong>Wheelchair:</strong>  
+      <%= @residential.wheelchair %>
+   </div>
+   <div class ="col-md-6">
+  <strong>Patio deck:</strong>  
+  <%= @residential.patio_deck %>
+</div>
+<div class ="col-md-6">
+  <strong>Golf course:</strong> 
+  <%= @residential.golf_course %>
+</div>
+<div class ="col-md-6">
+  <strong>Water view:</strong>  
+  <%= @residential.water_view %>
+</div>
+<div class ="col-md-6">
+  <strong>Water front:</strong>  
+  <%= @residential.water_front %>
+</div>
+</div>
+<br>
+<br>
+<div class ="col-md-6">
+ <h4><strong>Interior Features</strong></h4>
+ <div class ="col-md-6">
+  <strong>Elevator:</strong>  
+  <%= @residential.elevator %>
+</div>
+</div>
+<br>
+<br>
+<div class ="col-md-6">
+<h4><strong>Energy Features</strong></h4>
+ <div class ="col-md-6">
+  <strong>Energy:</strong>  
+  <%= @residential.energy_features %>
+</div>
+<div class ="col-md-6">
+  <strong>Green certification:</strong>  
+  <%= @residential.green_certification %>
+</div>
+</div>
+<br>
+<br>
+<div class ="col-md-6">
+<h4><strong>Realtor or Broker Contact Information</strong></h4>
+<div class ="col-md-6">
+  <strong>Realtor Name:</strong>  
+  <%= @residential.realtorname %>
+</div>
+  <div class ="col-md-6">
+  <strong>Phone:</strong>  
+  <%= @residential.realtorphonenumber %>
+</div>
+<div class ="col-md-6">
+  <strong>Email:</strong>  
+  <%= @residential.realtoremail %>
+</div>
+</div>
+</div>
+</div>
+    <br>
+    <br>
+   <div class ="col-md-12">
+    <div class= "center">
+   <strong>Map View Location:</strong><br>
+   <br>
+<iframe
+  width="800"
+  height="450"
+  frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAUOQ0h7ZYU56FuY9ziMMXURoIlHxC3pfY
+    &q=<%= @residential.address.parameterize %>">
+</iframe>
+</div>
+</div>
+<br>
+<br>
+
+
+
+</div>
+</div>
+<% if current_user == @residential.user %>
+<%= link_to 'Edit', edit_residential_path(@residential), class: "btn btn-link" %> |
+<% end %>
+<%= link_to 'Back', residentials_path, class: "btn btn-link" %>
+

@@ -1,0 +1,29 @@
+<div class="center">
+  <h2>Your Purchase History</h2>
+</div>
+
+<table class="table table-striped table-bordered">
+  <tr>
+    <th>Image</th>
+    <th>Package Item</th>
+    <th>Price</th>
+    <th>Seller First Name</th>
+     <th>Seller Last Name</th>
+    <th>Date Purchase</th>
+  </tr>
+<% @orders.each do |order| %>
+<tr>
+  <td class="center"><%= image_tag subscriptionpackage.image.url(:thumb) %></td>
+  <td class="center"><%= order.subscriptionpackage.package_name %></td>
+  <td class="center"><%= order.subscriptionpackage.price1 %></td>
+  <td class="center"><%= order.seller.first_name %></td>
+  <td class="center"><%= order.seller.last_name %></td>
+  <td class="center"><%= order.created_at.strftime("%B %-d, %Y") %></td>
+
+</tr>
+<% end %>
+</table>
+
+<br>
+
+<%= link_to 'New Subscriptionpackage', new_subscriptionpackage_path, class: "btn btn-warning", data: { no_turbolink: true } %>

@@ -1,0 +1,14 @@
+<%= form_tag search_residentials_path, method: :get do %>
+    <div class="form-group">
+       <select id="residential_property_type" name="residential[property_type]">
+        <option value="">Property Type</option>
+        <option value="Single Family Home">Single Family</option>
+        <option value="Townhouse or Condo">Townhouse/Condo</option>
+        <option value="High Condominium">Mid/Hi Condominium</option>
+        <option value="Lots">Residential_Lots</option>
+        <option value="Multi Family Home">Multi-Family Home</option>
+        </select>
+      </div>
+  <%= submit_tag "Search", name: nil, class: "btn btn-warning" %>
+  <% end %>
+</div>

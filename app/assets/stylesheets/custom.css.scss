@@ -1,0 +1,67 @@
+@import "bootstrap";
+body{
+
+	
+}
+.hero-unit
+{
+	font-family: arial black;
+	font-weight: bold;
+
+}
+.image-size {
+  max-width: 100%;
+  max-height: 40%;
+}
+.navbar-default {
+	background-color: #3d74c4;
+				}
+
+.navbar-default .navbar-brand{
+	font-family: guardian-egyptt, georgia, serif;
+	font-weight: 300;
+	color: #ffffff;
+	font-size: 10px;
+}
+.navbar-default .navbar-nav > li > a {
+	font-family :Museo, sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	color: #ffffff;
+}
+
+.center{
+	text-align: center;
+}
+.right{
+	text-align: right;
+}
+.left{
+	text-align: left;
+}
+.col-md-3:nth-child(4n+1) {
+	clear: left;
+}
+#page-header{
+	font-family: guardian-egyptt,calibri;
+}
+
+#features{
+	text-align: center;
+	font-family: sans-serif;
+	color: #007135;
+	font-size: 30px;
+	font-weight: bold;
+}
+#features img{
+	
+}
+#featuresHeading{
+	text-align: center;
+}
+
+footer{
+	background: #3d74c4;
+	color: #ffffff;
+	
+}

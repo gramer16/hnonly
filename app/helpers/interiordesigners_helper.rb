@@ -1,0 +1,2 @@
+module InteriordesignersHelper
+end

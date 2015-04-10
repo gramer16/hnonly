@@ -1,0 +1,19 @@
+<div class="thumbnail">
+  <h1> Advertising Subscriptions</h1>
+  <% @plans.each do |plan| %>
+   <div class="form-group">
+    <th>Plan Name:</th><%= plan.name %>
+   </div>
+   <div class="form-group">
+    <th>Price:</th><%= number_to_currency plan.price %>
+   </div>
+   <div class="form-group">
+    <th>Plan Interval:</th><%= plan.interval %>
+   </div>
+   <div class="form-group">
+   <%= link_to 'Subscribe', new_plan_path %>
+
+ </div>
+</div>
+    <% end %>
+ 

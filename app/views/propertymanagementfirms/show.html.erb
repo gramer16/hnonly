@@ -1,0 +1,55 @@
+
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="thumbnail">
+       <%= image_tag @propertymanagementfirm.image.url %>
+       <br> 
+      <strong><%= @propertymanagementfirm.company_name %></strong>
+      <br>
+      <br>
+      <strong><%= label_tag :nil, t('servicecompanywebsite') %></strong>  
+      <%= link_to @propertymanagementfirm.company_website, @propertymanagementfirm.company_website %><br>
+      
+      
+      <strong><%= label_tag :nil, t('companycontactname') %></strong>  
+     <%= @propertymanagementfirm.contact_name %>
+     <br>
+      <strong><%= label_tag :nil, t('companyservicephone') %></strong> 
+     <%= @propertymanagementfirm.company_phone %><br>
+     <strong><%= label_tag :nil, t('servicecompanyaddress') %></strong>  
+     <%= @propertymanagementfirm.address %><br>
+      <strong><%= label_tag :nil, t('city') %></strong>  
+     <%= @propertymanagementfirm.city %><br>
+     <strong><%= label_tag :nil, t('zipcode') %></strong>  
+     <%= @propertymanagementfirm.zipcode %><br>
+    </div>
+     <br>
+
+  </div>
+  <div class="col-md-6">
+    <h5><strong><%= label_tag :nil, t('generalcompany') %></strong></h5>
+    <%= @propertymanagementfirm.company_description %>
+  </div>
+
+</div>
+
+  <div class ="col-md-12">
+    <div class= "center">
+   <strong><%= label_tag :nil, t('mapview') %></strong><br>
+   <br>
+<iframe
+  width="800"
+  height="450"
+  frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAUOQ0h7ZYU56FuY9ziMMXURoIlHxC3pfY
+    &q=<%= @propertymanagementfirm.address.parameterize %>">
+</iframe>
+
+</div>
+<br>
+<br>  
+ </div>
+
+<%= link_to 'Edit', edit_propertymanagementfirm_path(@propertymanagementfirm), class: "btn btn-link" %> |
+<%= link_to t('back'), propertymanagementfirms_path, class: "btn btn-link" %>

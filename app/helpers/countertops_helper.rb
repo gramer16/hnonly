@@ -1,0 +1,2 @@
+module CountertopsHelper
+end

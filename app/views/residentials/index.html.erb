@@ -1,0 +1,172 @@
+ <div class="jumbotron">
+  <div class="left">
+    <%= t('jumbotron_residentialtitle_html') %>
+  
+ </div>
+ </div>
+  <div class="left">
+     <%= t('searchresidential_html') %>
+   <%= form_tag search_residentials_path, method: :get do %>
+          <p>
+        <%= text_field :search, params[:search], placeholder: t('searchtextbox'),class: "form-control" %><br>
+      <div class="right">
+        <button type ="button" class="btn btn-link" data-toggle="collapse" data-target="#filter">
+          <%= t('advancesearch') %>
+          <br>
+        </button>
+          <div id="filter" class="collapse in">
+            <br>
+            <div class="thumbnail">
+              <div class= "row">
+                <div class= "col-md-4">
+                 <div class= "form-group">
+                  <%= label_tag :Purchase_or_Lease, t('salerent') %><br>
+                  <%= select_tag(:action, options_for_select([["For Sale", "Sale"],["For Rent","Rent"]], params[:action]),{
+                    include_blank: false}) %>
+                  </div>
+                  </div>
+                  <div class= "col-md-4">
+                  <div class= "form-group">
+                <%= label_tag :type_of_Property, t('propertytype') %><br>
+                 <%= select_tag(:property_type, options_for_select([["Single Family","Single Family Home"],["Townhouse/Condo","Townhouse or Condo"],["Mid/Hi Condominium","High Condominium"],["Residential_Lots","Lots"],["Multi-Family Home","Multi Family Home"]], params[:property_type]),{include_blank: false}) %>
+               </div>
+             </div>
+             <div class= "col-md-4">
+               <div class= "form-group">
+                <%= label_tag :Status, t('status') %><br>
+                 <%= select_tag(:status, options_for_select([["Active","Active"],["Pending", "Pending"],["Pending Continue to Show", "Pending Continue to Show"],["Sold", "Sold"]],params[:status]),{include_blank: false}) %>
+                </div>
+              </div>
+              <div class= "col-md-4">
+                <div class= "form-group">
+                <%= label_tag :construction_Type, t('construction') %><br>
+                  <%= select_tag(:construction_type, options_for_select([["New Construction", "New Construction"],["Renovated","Renovated"],["Needs Renovations", "Needs Renovations"]], params[:construction_type]),{include_blank: false}) %>
+                  </div>
+                </div>
+                <div class= "col-md-4">
+                  <%= label_tag :Is_a_Foreclosure?, t('foreclosure') %><br>
+                  <%= select_tag(:foreclosure, options_for_select([["YES","YES"],["NO","NO"]], params[:foreclosure]),{include_blank: false}) %>
+                </div>
+              <div class= "col-md-4">
+                <div class= "form-group">
+                
+                </div>
+              </div>
+            </div>
+              <br>
+              <br>
+              <br>
+              <div class= "left">
+              <div class= "row">
+              <div class= "col-md-2">
+                <div class= "form-group">
+                  <%= label_tag :bedrooms, t('bedrooms') %><br>
+                  <%= text_field_tag :bedrooms, params[:bedrooms], class: "form-control" %>
+              </div>
+            </div>
+              <div class= "col-md-2">
+                <div class= "form-group">
+                  <%= label_tag :full_bathrooms, t('fullbathrooms') %><br>
+                  <%= text_field_tag :full_bathrooms, params[:full_bathrooms], class: "form-control" %>
+              </div>
+            </div>
+              <div class= "col-md-2">
+                <div class= "form-group">
+                    <%= label_tag :half_bathrooms, t('halfbathrooms') %><br>
+                    <%= text_field_tag :half_bathrooms, params[:half_bathrooms], class: "form-control" %>
+              </div>
+            </div>
+            <div class= "col-md-2">
+                <div class= "form-group">
+                  <%= label_tag :Min_square_feet, t('minsqft') %><br>
+                  <%= text_field_tag :min_square_feet, params[:min_square_feet], class: "form-control" %>
+              </div>
+            </div>
+              <div class= "col-md-2">
+                <div class= "form-group">
+                  <%= label_tag :Max_square_feet, t('maxsqft') %><br>
+                  <%= text_field_tag :max_square_feet, params[:max_square_feet], class: "form-control" %>
+              </div>
+              </div>
+          </div>
+        </div>
+        <div class= "left">
+          <div class= "row">
+              <div class= "col-md-2">
+                <div class= "form-group">
+                  <%= label_tag :Min_price, t('minprice') %><br>
+                  <%= text_field_tag :min_price, params[:min_price], class: "form-control" %>
+              </div>
+            </div>
+              <div class= "col-md-2">
+                <div class= "form-group">
+                  <%= label_tag :Max_price, t('maxprice') %>
+                  <%= text_field_tag :max_price, params[:max_price], class: "form-control" %>
+              </div>
+            </div>
+          </div>
+          </div>
+            </div>
+          </div>
+        </div>
+      </div>  
+<br>
+ <%= submit_tag t('searchbtn'), name: nil ,class: "btn btn-success" %>
+      </p>
+</div>
+      <% end %>
+      <br>
+      <br>
+      <p>
+
+               
+ 
+<div class="center"> 
+<div class="row">
+  <% @residentials.each do |residential| %>
+  <div class="col-md-3">
+    <div class="thumbnail">
+      <%= link_to image_tag(residential.image.url), residential %>
+      <div class="caption">
+        <h3><strong><%= residential.address %></strong></h3>
+          <h4><strong><th><th><%= label_tag :nil, t('price') %> </th> <%= number_to_currency(residential.price) %></strong></h4>
+          <p>   <p><%= t('listed_by', user: residential.user.name) %></p>
+            <%= residential.property_type %><br>
+            <th><%= label_tag :nil, t('bedrooms') %></th>   <%= residential.bedrooms %><br>
+            <th><%= label_tag :nil, t('fullbathrooms') %></th>   <%= residential.full_bathrooms %><br>
+            <th><%= label_tag :nil, t('halfbathrooms') %></th>   <%= residential.half_bathrooms %><br>
+            <th><%= label_tag :nil, t('squarefeet') %></th> <%= residential.square_feet %><br>
+            <th><%= label_tag :nil, t('zipcode') %></th>    <%= residential.zip_code %><br>
+             <th><%= label_tag :nil, t('construction') %></th> <%= residential.construction_type %><br>
+             <th><%= label_tag :nil, t('city') %></th> <%= residential.city %><br>
+            <th><%= label_tag :nil, t('privatepool') %></th>    <%= residential.private_pool %><br>
+            <th><%= label_tag :nil, t('waterview') %></th> <%= residential.water_view %><br>
+            <th><%= label_tag :nil, t('golf') %></th> <%= residential.golf_course %><br>
+            <th><%= label_tag :nil, t('water') %></th> <%= residential.water_front %><br>
+           
+            <th><%= label_tag :Status, t('status') %></th> <%= residential.status %><br>
+
+          </p>
+          <%= link_to 'Show', residential, class: "btn btn-warning" %>
+          <% if (user_signed_in?) && (current_user == residential.user) %>
+          <%= link_to 'Edit', edit_residential_path(residential), class: "btn btn-warning" %>
+          <%= link_to 'Delete', residential, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-warning" %>
+           <% end %>
+ </div>
+    </div>
+  </div>
+
+  <% end %>
+
+</div>
+</div>
+
+<br>
+<% if user_signed_in? %>
+<%= link_to t('new_residential'), new_residential_path, class: "btn btn-success" %>
+<% end %>
+<br>
+
+<!--<h1>Listing residentials</h1>-->
+
+

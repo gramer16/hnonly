@@ -1,0 +1,2 @@
+module TermiteinspectorsHelper
+end

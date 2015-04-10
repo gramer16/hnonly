@@ -1,0 +1,181 @@
+<%= form_for(@subscription,:html => { :multipart => true }) do |f|  %>
+  <% if @subscription.errors.any? %>
+    <div id="error_explanation" class="alert alert-danger alert-dismissable">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <h2><%= pluralize(@subscription.errors.count, "error") %> prohibited this subscription from being saved:</h2>
+
+      <ul>
+      <% @subscription.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div id="stripe_error" class="alert alert-danger" style="display:none">
+    <noscript>JavaScript is not enabled and is required for this form. First enable it in your web browser settings.</noscript>
+  </div>
+
+     
+    <br>
+    <div class="thumbnail">
+      <div class="field">
+        <div class="left">
+          <%= label_tag :nil, t('companyinfo') %>
+    </div>
+  </div>
+    <div class="form-group">
+      <div class="left">
+    <div class="row">
+      <div class="col-md-4">
+        <%= label_tag :nil, t('businessname') %><br>
+        <%= f.text_field :company_name, class: "form-control" %>
+        </div>
+        <div class="col-md-4">
+        <%= label_tag :nil, t('website') %><br>
+        <%= f.text_field :website, class: "form-control" %><br>
+        </div>
+        <div class="col-md-4">
+        <%= label_tag :nil, t('address') %><br>
+        <%= f.text_area :address, class: "form-control" %><br>
+        </div>
+        <div class="col-md-4">
+         <%= label_tag :nil, t('zipcode') %><br>
+       <%= f.text_field :zipcode, class: "form-control" %>
+        </div>
+        <div class="col-md-4">
+         <%= label_tag :nil, t('city') %><br>
+        <%= f.text_field :city, class: "form-control" %>
+        </div>
+        <div class="col-md-4">
+         <%= label_tag :nil, t('businessphone') %><br>
+        <%= f.text_field :phone, class: "form-control" %>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="left">
+    <div class="row">
+        <div class="col-md-4">
+        <%= label_tag :nil, t('contactname') %><br>
+        <%= f.text_field :contact, class: "form-control" %>
+        </div>
+        <div class="col-md-4">
+        <%= label_tag :nil, t('businessemail') %><br>
+        <%= f.text_field :company_email, class: "form-control" %>
+        </div>
+        <div class="col-md-4">
+        <%= f.label :pictures %>  <%= f.file_field :image, class: "form-control" %><br><br>
+        </div>
+         <div class="col-md-4">
+        <%= label_tag :nil, t('description') %><br>
+        <%= f.text_area :description, class: "form-control" %>
+        </div>
+        <br>
+        <br>
+    </div>
+  </div>
+  </div>
+  </div>
+    <br>
+    
+<div class="form-group">
+      <div class="left">
+    <div class="row">
+      <div class="col-md-4">
+    <%= f.label :name, "PLEASE SELECT A PLAN" %><br>
+    <%= f.select :name, options_for_select([["Gold Advertising Plan C$99.99", "Gold"], ["Discount Gold Advertising Plan C$59.99", "GoldDiscount"],["Basic Advertising Plan C$49.99","Basic"]]), class: "form-control" %><br>
+    </div>
+     <div class="col-md-4">
+      <%= label_tag :nil, "Honduras Only Seller ID" %><br>
+        <%= f.text_field :sellerid, class: "form-control" %>
+      </div>
+  </div>
+</div>
+</div>
+  <br>
+  <br>
+  <%= f.hidden_field :stripe_card_token %>
+  <br>
+  <div class="thumbnail">
+    <div class="field">
+      <div class="left">
+    <%= label_tag :nil, t('paymentinfo') %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="left">
+      <div class="col-md-4">
+    <%= label_tag :nil, t('name') %><br>
+    <%= f.text_field :card_name, class: "form-control" %>
+      </div>
+    <div class="col-md-8">
+    <%= label_tag :nil, t('billingaddress') %><br>
+    <%= f.text_field :bill_address, class: "form-control"  %>
+    </div>
+     <div class="col-md-4">
+    <%= label_tag :nil, t('email') %><br>
+    <%= f.text_field :email, class: "form-control"  %>
+    </div>
+  </div>
+</div>
+  <br>
+  <% if @subscription.stripe_card_token.present? %>
+  Credit card has been provided.
+  <% else %>
+  <div class="form-group">
+    <div class="left">
+    <div class="row">
+      
+      <div class="col-md-4">
+      <%= label_tag :card_number, t('creditcard') %>
+      <%= text_field_tag :card_number, nil, name: nil, class: "form-control"  %>
+      </div>
+        <div class="col-md-2">
+        <%= image_tag("creditcard.png", :size => "220x33", :alt => "Credit" ) %>      
+      </div>
+    </div>
+      </div>
+    </div>
+    <div class="form-group">
+    <div class="left">
+    <div class="row">
+      <%= image_tag("cardsecurity.png", :size => "40x30", :alt => "Credit" ) %> 
+      <div class="col-md-2">
+        <%= label_tag :nil, t('securitycode') %><br>
+      <%= text_field_tag :card_code, nil, name: nil, class: "form-control"%>
+      </div>
+       </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="left">
+      <%= label_tag :card_month, t('cardexpiration') %>
+    <div class="row">
+      <div class="col-md-3">
+    <%= select_month nil, {add_month_numbers: true}, {name: nil, id: "card_month", class: "form-control"}  %>
+  </div>
+   <div class="col-md-3">
+    <%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, id: "card_year", class: "form-control" } %>
+  </div>
+</div>
+</div>
+</div>
+ <div class="form-group">
+  <div class="row">
+ <div class="right">
+  <div class="col-md-12">
+    <%= image_tag("securepayment.png", :size => "140x70", :alt => "Credit" ) %> 
+    <%= image_tag("pcicompliant.png", :size => "120x70", :alt => "Credit" ) %> 
+  </div>
+</div>
+  </div>
+  </div>
+</div>
+<% end %>
+<div class="left">
+    <div class="actions">
+    <%= f.submit t('submit'), class: "btn btn-success" %>
+  </div>
+</div>
+<% end %>

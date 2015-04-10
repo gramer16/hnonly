@@ -1,0 +1,58 @@
+<div class="jumbotron">
+  <div class="left">
+    <%= t('jumbotron_stagingtitle_html') %>
+  
+ </div>
+ </div>
+ <br>
+
+<div class="left">
+  <%= t('searchservice_html') %>
+   <%= form_tag search_stagings_path, method: :get do %>
+          <p>
+        <%= text_field :search, params[:search], placeholder: t('searchtextbox'), class: "form-control" %>
+        <br>
+         <%= submit_tag t('searchbtn'), name: nil ,class: "btn btn-success" %>
+      </p>
+    </div>
+  <% end %>
+
+<div class="thumbnail">
+  <div class="center"> 
+    <div class="row">
+      <% @stagings.each do |staging| %>
+      <div class="col-md-3">
+      <div class="thumbnail">
+        <%= link_to image_tag(staging.image.url), staging %>
+        <div class="caption">
+          <h4><strong><%= staging.company_name %></strong></h4>
+          <strong><th><%= label_tag :nil, t('servicecompanywebsite') %></th></strong><br>
+            <%= link_to staging.company_website, staging.company_website %><br>
+            <strong><th><%= label_tag :nil, t('servicecompanyphone') %></th></strong><br>
+            <%= staging.company_phone %><br>
+           <strong><th><%= label_tag :nil, t('servicecompanyaddress') %></th></strong><br>
+           <%= staging.address %><br> 
+           <strong><th><%= label_tag :nil, t('city') %></th></strong><%= staging.city %><br>
+           <strong><th><%= label_tag :nil, t('zipcode') %></th></strong><br><%= staging.zipcode %><br>
+           <br>
+           
+           <td><%= link_to 'Show', staging, class: "btn btn-success" %></td>
+        
+        <td><%= link_to 'Edit', edit_staging_path(staging), class: "btn btn-success" %></td>
+        <td><%= link_to 'Destroy',staging, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-success" %></td>
+        </div>
+      </div>
+    </div>
+    <% end %>
+    </div>
+
+  </div>
+</div> 
+
+
+<br>
+<br>
+
+<% if user_signed_in? && current_user.admin? %>
+<%= link_to t('add_service'), new_staging_path, class: "btn btn-success" %>
+<% end %>

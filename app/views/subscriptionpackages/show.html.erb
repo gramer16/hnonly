@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-md-6">
+    <div class="thumbnail">
+       <%= image_tag @subscriptionpackage.image.url %>
+       <br> 
+      <strong><%= @subscriptionpackage.package_title %></strong>
+      <br>
+      <br>
+      <strong>Subscription Name:</strong>  
+      <%= @subscriptionpackage.package_name %><br>
+      
+      
+      <strong>Package Description:</strong>  
+     <%= @subscriptionpackage.package_description %>
+     <br>
+      <strong>Price:</strong> 
+     <%= @subscriptionpackage.price1 %><br>
+     <br>
+     <div class="center">
+      <%= link_to "Buy Option to Post Listing Now", new_subscriptionpackage_order_path(@subscriptionpackage), class: "btn btn-warning", data: { no_turbolink: true } %>
+     </div>
+    </div>
+     <br>
+
+  </div>
+  <div class="col-md-6">
+    <h5><strong>Subscription Features Include:</strong></h5>
+    <%= @subscriptionpackage.features_include %>
+  </div>
+
+</div>
+
+
+<%= link_to 'Edit', edit_subscriptionpackage_path(@subscriptionpackage), class: "btn btn-link" %> |
+<%= link_to 'Back', subscriptionpackages_path, class: "btn btn-link" %>

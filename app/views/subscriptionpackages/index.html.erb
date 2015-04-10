@@ -1,0 +1,37 @@
+<div class="thumbnail">
+  <div class="center"> 
+    <div class="row">
+      <% @subscriptionpackages.each do |subscriptionpackage| %>
+      <div class="col-md-3">
+      <div class="thumbnail">
+        <%= link_to image_tag(subscriptionpackage.image.url), subscriptionpackage %>
+        <div class="caption">
+          <h4><strong><%= subscriptionpackage.package_title %></strong></h4>
+          <strong><th>Subscription Name: </th></strong><br>
+            <%= subscriptionpackage.package_name %><br>
+            <strong><th>Subscription Package Description: </th></strong><br>
+            <%= subscriptionpackage.package_description %><br>
+           <strong><th>Price: </th></strong><br>
+           <%= subscriptionpackage.price %><br> 
+           <strong><th>Features Include: </th></strong><%= subscriptionpackage.features_include %><br>
+           <br>
+           
+           <td><%= link_to 'Show', subscriptionpackage, class: "btn btn-warning" %></td>
+            <td><%= link_to 'Edit', edit_subscriptionpackage_path(subscriptionpackage), class: "btn btn-warning" %></td>
+            <td><%= link_to 'Destroy', subscriptionpackage, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-warning" %></td>
+        </div>
+      </div>
+    </div>
+    <% end %>
+    </div>
+
+  </div>
+</div>   
+   
+
+<br>
+
+
+<br>
+
+<%= link_to 'New Subscriptionpackage', new_subscriptionpackage_path, class: "btn btn-warning", data: { no_turbolink: true }  %>

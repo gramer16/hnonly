@@ -1,0 +1,427 @@
+# French translations for Ruby on Rails
+# by Christian Lescuyer (christian@flyingcoders.com)
+# contributors:
+#  - Sebastien Grosjean - ZenCocoon.com
+#  - Bruno Michel - http://github.com/nono
+#  - Tsutomu Kuroda - http://github.com/kuroda (t-kuroda@oiax.jp)
+# Emended by Benjamin des Gachons and Patrick Chew : <http://www.fitima.org/docs/fiche.pdf>
+
+fr:
+  Purchase_or_Lease: Comprar o Rentar
+  Service: Servicios
+  subscribe: SUBSCRIBIR
+  listing: PUBLICAR UNA PROPIEDAD
+  title_html: <h4 style="font-family:Calibri", align="center"><font color="004bb3"><font size="10">Todo en Bienes y Raices - Solo Bienes y Raices</font></font></h4>
+  subtitle_html:  <font color="ff0019"><h2 style="font-family:Calibri"><strong>Que servicio desea encontrar?</strong></h2></font>
+        <p class="lead"></p>
+  semititle_html:  <font color="004bb3"><h3 class="panel-title", style="font-family:Calibri"><strong>BIENES Y RAICES RESIDENCIAL</strong></h3></font>
+  csemititle_html: <font color="004bb3"><h3 class="panel-title", style="font-family:Calibri"><strong>BIENES Y RAICES COMERCIAL</strong></h3></font>
+  ssemititle_html: <font color="004bb3"><h3 class="panel-title", style="font-family:Calibri"><strong>SERVICIOS DE BIENES Y RAICES</strong></h3></font>
+  navbar_home: Pagina Principal
+  navbar_memberships: Anunciar un Servicio Inmobiliario
+  navbar_search: Buscar
+  navbar_about: Acerca de Nosotros
+  navbar_language: Lenguaje
+  navbar_english: Ingles
+  navbar_french: Espanol
+  navbar_account: Inscribirse o Conectarse
+  navbar_create: Crear una cuenta Honduras Only
+  navbar_signin: Iniciar Sesion en Honduras Only
+  navbar_notmember: No es un Miembro?
+  navbar_member: Es un Miembro?
+  navbar_residential: Listado de Propiedades Residenciales
+  navbar_commercial: Listado de Propiedades Comerciales
+  navbar_realservices: Servicios Inmobiliarios
+  searchtextbox: Ingrese una localizacion (Direccion, Ciudad, Codigo Postal)
+  advancesearch: OPCIONES DE BUSQUEDA AVANZADA
+  salerent: Propiedad para Comprar o Vender
+  propertytype: Tipo de Propiedad
+  status: Estado
+  construction: Tipo de Construccion
+  foreclosure: Hipotecada?
+  bedrooms: Habitaciones
+  price: Precio
+  details: Detalles de Propiedad
+  agentphone: Telefono de Agente Inmboliario
+  agentemail: Correo de Agente Inmobiliario
+  commercialwebsite: Sitio Web de Empresa
+  realestatecompany: Empresa Inmobiliaria
+  officephone: Telefono
+  suites: Total Locales
+  floornumbers: Numero de Pisos
+  listingagent: Agente Inmobiliario
+  fullbathrooms: Banos Completos
+  halfbathrooms: Medio Banos
+  minsqft: Minimo en Pies Cuadrados
+  maxsqft: Maximo en Pies Cuadrados
+  minprice: Precio Minimo 
+  maxprice: Precio Maximo
+  searchbtn: Busqueda
+  searchservices: BUSQUEDA
+  add_service: Agregar un Servicio
+  servicestitle_html: <h2 style="font-family:Arial">Todos los Servicios en Honduras</h2>
+  listed_by: Posteado por %{user}
+  new_residential: Agregar una Nueva Propiedad
+  new_commercial: Agregar una Nueva Propiedad
+  squarefeet: Pies Cuadrados
+  privatepool: Piscina Privada
+  waterview: Vista al Mar o Lago
+  golf: Terreno de Golf
+  water: Cerca del Agua
+  privacy_html: <h2 style="font-family:Arial"><strong>POLITICA DE PRIVACIDAD</strong></h2>
+  jumbotron_residentialtitle_html: <h2>Listado de Propiedad Residencial</h2>
+  jumbotron_commercialtitle_html: <h2>Listado de Propiedad Comercial</h2>
+  architect_html: <h3 class="panel-title">ARQUITECTOS</h3>
+  airconditioner_html: <h3 class="panel-title">AIRE ACONDICIONADO / VENTILACION</h3>
+  asphalt_html: <h3 class="panel-title">EMPRESAS DE ASFALTO</h3>
+  banks_html:  <h3 class="panel-title">BANCOS</h3>
+  builder_html:  <h3 class="panel-title">CONSTRUCTORES</h3>
+  building_html: <h3 class="panel-title">MATERIALES DE CONSTRUCTION</h3>
+  cashbuyer_html: <h3 class="panel-title">COMPRADORES EN EFECTIVO</h3>
+  cabinet_html: <h3 class="panel-title">CABINETES</h3>
+  cement_html:  <h3 class="panel-title">CONCRETO Y CEMENTO</h3>
+  cleaning_html:  <h3 class="panel-title">SERVICIO DE LIMPIEZA</h3>
+  countertops_html: <h3 class="panel-title">SUPERFICIES DE COCINA</h3>
+  cleaningremoval_html:  <h3 class="panel-title">REMOVEDOR DE BASURA</h3>
+  decks_html: <h3 class="panel-title">PATIOS Y TERRAZAS</h3>
+  drywall_html: <h3 class="panel-title">DRYWALL</h3>
+  electricians_html: <h3 class="panel-title">ELECTRICISTAS</h3>
+  eav_html:  <h3 class="panel-title">EAVESTROUGHING</h3>
+  exterior_html: <h3 class="panel-title">DISENADOR DE EXTERIORES</h3>
+  engineer_html: <h3 class="panel-title">INGENIEROS</h3>
+  flooring_html: <h3 class="panel-title">PISOS</h3>
+  framing_html: <h3 class="panel-title">ENMARCADO</h3>
+  foundation_html: <h3 class="panel-title">FUNDACION (NUEVO + REPARACIONES)</h3>
+  fireplace_html: <h3 class="panel-title">CHIMINEAS</h3>
+  general_html: <h3 class="panel-title">CONTRATISTAS</h3>
+  homeinspector_html: <h3 class="panel-title">INSPECTORES DE CASAS</h3>
+  hardmoney_html: <h3 class="panel-title">PRESTAMISTAS</h3>
+  theater_html: <h3 class="panel-title">CINES EN CASA</h3>
+  insulation_html:  <h3 class="panel-title">AISLAMIENTO</h3>
+  interior_html: <h3 class="panel-title">DISENADORES DE INTERIORES</h3>
+  wood_html: <h3 class="panel-title">ALUMINIO / MADERA / VINIL</h3>
+  light_html: <h3 class="panel-title">ILUMNIACION / VENTILADORES</h3>
+  landscaping_html: <h3 class="panel-title">JARDINERIA</h3>
+  landsurveyors_html: <h3 class="panel-title">TOPOGRAFOS</h3>
+  moving_html: <h3 class="panel-title">COMPANIAS DE MUDANZA</h3>
+  mortgage_html: <h3 class="panel-title">CORREDORES DE HIPOTECAS</h3>
+  mold_html: <h3 class="panel-title">INSPECTORES DE MOHO</h3>
+  paint_html: <h3 class="panel-title">PINTORES</h3>
+  plumbing_html: <h3 class="panel-title">PLOMERIA</h3>
+  privatefirm_html: <h3 class="panel-title">EMPRESAS PRIVADAS DE EVALUACIÓN</h3>
+  propertyfirm_html: <h3 class="panel-title">EMPRESAS DE GESTIÓN DE LA PROPIEDAD</h3>
+  poolcleaner_html: <h3 class="panel-title">LIMPIADORES DE PISCINAS</h3>
+  poolrepair_html: <h3 class="panel-title">REPARACION DE PISCINAS</h3>
+  realtor_html: <h3 class="panel-title">AGENTES INMOBILIARIOS</h3>
+  accountant_html: <h3 class="panel-title">CONTADORES</h3>
+  lawyer_html: <h3 class="panel-title">ABOGADOS</h3>
+  realestate_html: <h3 class="panel-title">EMPRESAS INMBOLIARIAS</h3>
+  rentalpropertyfirm_html: <h3 class="panel-title">EMPRESAS DE GESTION DE RENTA DE PROPIERDADES</h3>
+  remodel_html: <h3 class="panel-title">ESPECIALISTAS EN REMODELACION Y RENOVACION</h3>
+  roofing_html: <h3 class="panel-title">TECHADO</h3>
+  security_html: <h3 class="panel-title">COMPANIAS DE SEGURIDAD</h3>
+  septic_html: <h3 class="panel-title">ESPECIALISTA EN FOSAS</h3>
+  solarscreen_html: <h3 class="panel-title">PANELES SOLARES / TRATAMIENTO DE VENTANAS</h3>
+  staging_html: <h3 class="panel-title">EMPRESAS DE ESCENIFICACION</h3>
+  soffit_html: <h3 class="panel-title">SOFFIT FACIA</h3>
+  spapool_html: <h3 class="panel-title">VENTA DE PISCINAS DE SPA/INSTALACION/REPARACION</h3>
+  solarenergy_html: <h3 class="panel-title">ENERGIA SOLAR</h3>
+  dissable_html: <h3 class="panel-title">EQUIPO DE HOGAR PARA PERSONAS DISCAPACITADAS </h3>
+  tax_html: <h3 class="panel-title">ESPECIALISTA DE IMPUESTOS</h3>
+  termite_html: <h3 class="panel-title">INSPECTORES DE TERMITAS</h3>
+  titlecompany_html: <h3 class="panel-title">EMPRESAS DE TITULOS DE PROPIEDADES</h3>
+  windows_html: <h3 class="panel-title">FABRICACION DE VENTANAS E INSTALACION</h3>
+  weather_html: <h3 class="panel-title">CONSTRUCCION EN PROTECCION CONTRAL EL CLIMA</h3>
+  appliance_html: <h3 class="panel-title">VENTA DE ELECTRODOMESTICOS</h3>
+  appliancerepair_html: <h3 class="panel-title">REPARACION DE ELECTRODOMESTICOS</h3>
+  searchresidential_html: <h4><strong>Buscar Propiedad Residencial</strong></h4>
+  searchcommercial_html: <h4><strong>Buscar Propiedad Comercial</strong></h4>
+  adtitle_html: <font color="cf142b"><h2 style="font-family:Calibri"><strong>Seleccione su plan de publicidad o Publicar una propiedad Renta / Venta y maximize los clientes para su negocio!</strong></h2></font>
+        <p class="lead"></p>
+  addtitle_html:  <font color="166e40"><h2 style="font-family:Calibri"><strong>** Los primeros 50 usuarios que se suscriban al plan Oro o Listado Publicidad recibirán 30% de descuento para toda la duración de su contrato **</strong></h2></font>
+  adsubtitle_html:   <font color="858585"><h6 style="font-family:Calibri"><strong>*Pour annuler votre abonnement se il vous plaît contactez-nous à notre e-mail de soutien à la clientèle ou notre téléphone de support client..</strong></h6></font>
+        <p class="lead"></p>
+  psubtitle_html:  <font color="272727"><h3 style="font-family:Calibri"><strong>*Pregunte por Nuestros Paquetes Diamante y Platinium</strong></h3></font>
+        <p class="lead"></p>
+  wsubtitle_html: <font color="bf0a30"><h4 style="font-family:Calibri"><strong>*Pregunte por nuestro servicio de Desarrollo de Sitios Web para su negocio de D & G Global para vincular su negocio con Honduras Only para maximizar sus clientes...</strong></h4></font>
+        <p class="lead"></p>
+  contact_html: <h4 style="font-family:Calibri"> <strong> Contactenos:</strong></h4>
+  about_html: <h4 style="font-family:Calibri"><strong> Quienes somos:</strong></h4><h6>Honduras Only es una empresa de marketing en línea que ofrece un servicio profesional de la publicidad a todos los profesionales del sector inmobiliario en toda la republica de Honduras</h6>
+  follow_html: <h4 style="font-family:Calibri"><strong>SIGANOS EN<strong></h4>
+  companyinfo: INFORMACION DE LA EMPRESA
+  jumbotron_title_html: <h2>Anunciar un Servicio Inmobiliario</h2>
+  businessname: Nombre de la Empresa
+  website: Pagina Web Empresarial
+  address: Direccion
+  zipcode: Codigo Postal
+  city: Ciudad
+  businessphone: Telefono de la Empresa
+  description: Perfil de la Empresa
+  contactname: Nombre de Contacto
+  businessemail: Correo de Empresa
+  plan: POR FAVOR SELECCIONE UN PLAN DE PUBLICIDAD
+  paymentinfo: INFORMACION DE PAGO
+  name: Nombre Completo
+  billingaddress: Direccion de Facturacion
+  email: Correo Electronico
+  creditcard: Numero de Tarjeta de Credito
+  securitycode: Codigo de Seguridad(CVV)
+  cardexpiration: Fecha de Expiracion
+  submit: Procesar
+  ourcompany_html: <h2 style="font-family:Arial"><strong>NUESTRA EMPRESA</strong></h2>
+  bodycompany_html: <h4><strong>Honduras Only</strong> es una empresa de marketing en línea que ofrece la publicidad profesional para todos los profesionales del sector inmobiliario en la republica de Honduras.<br><br><strong>Honduras Only</strong> es parte de una de las <strong>D&G Global</strong> estrategias de marketing de software que ofrecen a sus clientes a maximizar los clientes y sus negocios. <br><br><strong>D&G Global</strong> es una empresa de consultoría de desarrollo de software que ofrece servicios tecnológicos a medida como los servicios de desarrollo web para su negocio para conectar con <strong>Honduras Only</strong> para maximizar sus clientes a través de las últimas tecnologías de desarrollo web y estrategias de marketing. <br></h4>
+  subbodycompany_html: <p><h4><strong>CÓMO CONTACTAR CON NOSOTROS</strong></h4>
+  morecompany_html: <h4>Si desea ponerse en contacto con nosotros con cualquier pregunta o comentario, por favor envíe un correo a<strong>customers@ontariosonly.ca</strong> o llame al <strong>1-844-DNG-GLOBE</strong><br></p></h4>
+  jumbotron_flooringstitle_html: <h2>Servicios de Pisos</h2>
+  jumbotron_drywalltitle_html: <h2>Servicios de Drywall</h2>
+  jumbotron_cabinetstitle_html: <h2>Servicios de Cabinetes</h2>
+  jumbotron_countertoptitle_html: <h2>Servicios de Superficies de Cocina</h2>
+  jumbotron_architecttitle_html:  <h2>Servicios de Arquitectura</h2>
+  jumbotron_accountantstitle_html: <h2>Servicios de Contabilidad</h2> 
+  jumbotron_airconditionertitle_html: <h2>Servicios de Aire Acondicionado y Ventilacion</h2>
+  jumbotron_cashbuyertitle_html: <h2>Servicios de Compradores en Efectivo</h2>
+  jumbotron_framingtitle_html: <h2>Servicios de Enmarcado</h2>
+  jumbotron_contratortitle_html: <h2>Servicio de Titulos de Propiedad</h2>
+  jumbotron_hardmoneytitle_html: <h2>Servicio de Prestamistas</h2>
+  jumbotron_homeinspectortitle_html: <h2>Servicios de Inspeccion de Casas</h2>
+  jumbotron_insulationtitle_html: <h2>Servicios de Aislamiento</h2>
+  jumbotron_interiordesignertitle_html: <h2>Decoradores de Interiores</h2> 
+  jumbotron_landscapingtitle_html: <h2>Servicios de Diseno de Jardineria</h2>
+  jumbotron_landsurveyortitle_html: <h2>Servicios de Topografia</h2> 
+  jumbotron_lawyertitle_html: <h2>Servicios de Abogados</h2>
+  jumbotron_moldtitle_html: <h2>Services de Inspeccion de Moho</h2>
+  jumbotron_mortgagetitle_html: <h2>Servicio de Hipotecas</h2>
+  jumbotron_movingtitle_html: <h2>Servicio de Mudanzas</h2>
+  jumbotron_paintingtitle_html: <h2>Servicios de Pintura</h2>
+  jumbotron_plumbingtitle_html: <h2>Servicios de Plomeria</h2>
+  jumbotron_poolcleanertitle_html: <h2>Services de Limpieza de Piscina</h2>
+  jumbotron_poolrepairtitle_html: <h2>Services de Reparacion de Piscinas</h2>
+  jumbotron_privatebanktitle_html: <h2>Servicios de Bancos Privados</h2>
+  jumbotron_privatefirmtitle_html: <h2>Servicios de Sociedades Privadas</h2>
+  jumbotron_propertymanagetitle_html: <h2>Empresas de Administracion de Bienes y Raices</h2>
+  jumbotron_realestatetitle_html: <h2>Companias Inmobiliarias</h2>
+  jumbotron_realtortitle_html: <h2>Agentes de Bienes y Raices</h2>
+  jumbotron_rentalpropertytitle_html: <h2>Servicios de Renta de Propierdades</h2>
+  jumbotron_roofingtitle_html: <h2>Servicios de Techado</h2>
+  jumbotron_securitytitle_html: <h2>Servicios de Seguridad</h2>
+  jumbotron_septictitle_html: <h2>Servicios de Fosas Septicas</h2>
+  jumbotron_solarscreentitle_html: <h2>Servicios de Paneles Solares</h2>
+  jumbotron_stagingtitle_html: <h2>Servicios de Companias de Escenificacion</h2>
+  jumbotron_taxestitle_html: <h2>Especialistas en Impuestos</h2>
+  jumbotron_termitetitle_html: <h2>Inspectores de Termitas</h2>
+  jumbotron_titletitle_html: <h2>Empresas de Titulos</h2>
+  jumbotron_windowtitle_html: <h2>Ventanas</h2>
+  jumbotron_missingservicestitle_html: <h2>Servicios de Bienes y Raices</h2>
+  jumbotron_asphalttitle_html: <h2>Servicios de Asfalto</h2>
+  searchservice_html: <h4><strong>Buscar un Servicio</strong></h4>
+  jumbotron_subscriptiontitle_html: <h2>Empresas de Bienes Raices Subscritas</h2>
+  companynamesubscription_html: <strong><th class="center">Nombre de la Empresa</th></strong>
+  companysitesubscription_html: <strong><th class="center">Pagina Web de la Empresa</th></strong>
+  addresssubscription_html: <strong><th class="center">Direccion</th></strong>
+  citysubscription_html: <strong><th class="center">Ciudad</th></strong>
+  zipcodesubscription_html: <strong><th class="center">Codigo Postal</th></strong>
+  phonesubscription_html: <strong><th class="center">Numéro de Telefono</th></strong>
+  actionsubscription_html: <th class="center">Actividad</th>
+  image_html: <th class="center">Imagen</th>
+  add_subscription: SUBSCRIBIRSE
+  servicecompanywebsite: Sitio Web de la Empresa
+  servicecompanyphone: Telefono de la Empresa
+  servicecompanyaddress: Direccion
+  addservice: Agregar un Servicio Inmobiliario
+  searchresults_html: <h4><strong>BUSQUEDA:</strong></h4><br>
+  back: Regresar
+  companycontactname: Nombre de la Persona de Contacto
+  companyservicephone: Telefono de la Empresa
+  generalcompany: Detalle de la Empresa
+  mapview: Vista en el Mapa
+  date:
+    abbr_day_names:
+    - dom
+    - lun
+    - mar
+    - mié
+    - jue
+    - vie
+    - sáb
+    abbr_month_names:
+    - 
+    - ene
+    - feb
+    - mar
+    - abr
+    - may
+    - jun
+    - jul
+    - ago
+    - sep
+    - oct
+    - nov
+    - dic
+    day_names:
+    - domingo
+    - lunes
+    - martes
+    - miércoles
+    - jueves
+    - viernes
+    - sábado
+    formats:
+      default: "%d/%m/%Y"
+      long: "%d de %B de %Y"
+      short: "%d de %b"
+    month_names:
+    - 
+    - enero
+    - febrero
+    - marzo
+    - abril
+    - mayo
+    - junio
+    - julio
+    - agosto
+    - septiembre
+    - octubre
+    - noviembre
+    - diciembre
+    order:
+    - :day
+    - :month
+    - :year
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: alrededor de 1 hora
+        other: alrededor de %{count} horas
+      about_x_months:
+        one: alrededor de 1 mes
+        other: alrededor de %{count} meses
+      about_x_years:
+        one: alrededor de 1 año
+        other: alrededor de %{count} años
+      almost_x_years:
+        one: casi 1 año
+        other: casi %{count} años
+      half_a_minute: medio minuto
+      less_than_x_minutes:
+        one: menos de 1 minuto
+        other: menos de %{count} minutos
+      less_than_x_seconds:
+        one: menos de 1 segundo
+        other: menos de %{count} segundos
+      over_x_years:
+        one: más de 1 año
+        other: más de %{count} años
+      x_days:
+        one: 1 día
+        other: "%{count} días"
+      x_minutes:
+        one: 1 minuto
+        other: "%{count} minutos"
+      x_months:
+        one: 1 mes
+        other: "%{count} meses"
+      x_seconds:
+        one: 1 segundo
+        other: "%{count} segundos"
+    prompts:
+      day: Día
+      hour: Hora
+      minute: Minutos
+      month: Mes
+      second: Segundos
+      year: Año
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      accepted: debe ser aceptado
+      blank: no puede estar en blanco
+      confirmation: no coincide
+      empty: no puede estar vacío
+      equal_to: debe ser igual a %{count}
+      even: debe ser par
+      exclusion: está reservado
+      greater_than: debe ser mayor que %{count}
+      greater_than_or_equal_to: debe ser mayor que o igual a %{count}
+      inclusion: no está incluido en la lista
+      invalid: no es válido
+      less_than: debe ser menor que %{count}
+      less_than_or_equal_to: debe ser menor que o igual a %{count}
+      not_a_number: no es un número
+      not_an_integer: debe ser un entero
+      odd: debe ser impar
+      record_invalid: 'La validación falló: %{errors}'
+      taken: ya está en uso
+      too_long: es demasiado largo (%{count} caracteres máximo)
+      too_short: es demasiado corto (%{count} caracteres mínimo)
+      wrong_length: no tiene la longitud correcta (%{count} caracteres exactos)
+    template:
+      body: 'Se encontraron problemas con los siguientes campos:'
+      header:
+        one: No se pudo guardar este/a %{model} porque se encontró 1 error
+        other: No se pudo guardar este/a %{model} porque se encontraron %{count} errores
+  helpers:
+    select:
+      prompt: Por favor seleccione
+    submit:
+      create: Crear %{model}
+      submit: Guardar %{model}
+      update: Actualizar %{model}
+  number:
+    currency:
+      format:
+        delimiter: "."
+        format: "%n %u"
+        precision: 2
+        separator: ","
+        significant: false
+        strip_insignificant_zeros: false
+        unit: "€"
+    format:
+      delimiter: "."
+      precision: 3
+      separator: ","
+      significant: false
+      strip_insignificant_zeros: false
+    human:
+      decimal_units:
+        format: "%n %u"
+        units:
+          billion: mil millones
+          million: millón
+          quadrillion: mil billones
+          thousand: mil
+          trillion: billón
+          unit: ''
+      format:
+        delimiter: ''
+        precision: 1
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: "%n %u"
+        units:
+          byte:
+            one: Byte
+            other: Bytes
+          gb: GB
+          kb: KB
+          mb: MB
+          tb: TB
+    percentage:
+      format:
+        delimiter: ''
+    precision:
+      format:
+        delimiter: ''
+  support:
+    array:
+      last_word_connector: ", y "
+      two_words_connector: " y "
+      words_connector: ", "
+  time:
+    am: am
+    formats:
+      default: "%A, %d de %B de %Y %H:%M:%S %z"
+      long: "%d de %B de %Y %H:%M"
+      short: "%d de %b %H:%M"
+    pm: pm

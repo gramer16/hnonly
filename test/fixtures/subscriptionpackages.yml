@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  package_title: MyString
+  package_name: MyString
+  package_description: MyText
+  price: MyString
+  features_include: MyText
+
+two:
+  package_title: MyString
+  package_name: MyString
+  package_description: MyText
+  price: MyString
+  features_include: MyText

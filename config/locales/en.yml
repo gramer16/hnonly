@@ -1,0 +1,250 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  Purchase_or_Lease: Puchase or Lease
+  Service: Services
+  subscribe: SUBSCRIBE
+  listing: POST LISTING
+  title_html: <h4 style="font-family:Calibri", align="center"><font color="004bb3"><font size="10">Everything Real Estate - Only Real Estate</font></font></h4>
+  subtitle_html:  <font color="ff0019"><h2 style="font-family:Calibri"><strong>What are you Looking for?</strong></h2></font>
+        <p class="lead"></p>
+  semititle_html:  <font color="004bb3"><h3 class="panel-title", style="font-family:Calibri"><strong>RESIDENTIAL REAL ESTATE</strong></h3></font>
+  csemititle_html: <font color="004bb3"><h3 class="panel-title", style="font-family:Calibri"><strong>COMMERCIAL REAL ESTATE</strong></h3></font>
+  ssemititle_html: <font color="004bb3"><h3 class="panel-title", style="font-family:Calibri"><strong>REAL ESTATE SERVICES</strong></h3></font>
+  navbar_home: Home
+  navbar_memberships: Advertise a Real Estate Service or Listing
+  navbar_search: Find All in Real Estate
+  navbar_about: About us
+  navbar_language: Language
+  navbar_english: English
+  navbar_french: Spanish
+  navbar_account: Create Account or Sign in
+  navbar_create: Create an Honduras Only account
+  navbar_signin: Sign in to your Honduras Only account
+  navbar_notmember: Not a Member?
+  navbar_member: Already a Member?
+  navbar_residential: Residential Property Listing
+  navbar_commercial: Commercial Property Listing
+  navbar_realservices: Real Estate Services
+  searchresidential_html: <h4><strong>Find a Residential Listing</strong></h4>
+  searchcommercial_html: <h4><strong>Find a Commercial Listing</strong></h4>
+  searchtextbox: Enter a Location (Address, City, Zipcode)
+  advancesearch: ADVANCED SEARCH OPTIONS
+  price: Price
+  realestatecompany: Real Estate Company
+  officephone: Office Phone
+  commercialwebsite: Company Website
+  listingagent: Listing Agent
+  agentphone: Realtor Phone
+  agentemail: Realtor Phone
+  suites: Total Units or Suites
+  floornumbers: Floor Numbers
+  details: Property Details
+  salerent: Property for Purchase or Lease
+  propertytype: Type of Property
+  status: Property Status
+  foreclosure: Floreclosure Property?
+  construction: Type of Construction
+  bedrooms: Bedrooms
+  fullbathrooms: Full Bathrooms
+  halfbathrooms: Half Bathrooms
+  minsqft: Min Square Feet
+  maxsqft: Max Square Feet
+  minprice: Min Price 
+  maxprice: Max Price
+  searchbtn: Search
+  searchservices: SEARCH
+  add_service: Add a Service
+  servicestitle_html:  <h2 style="font-family:Arial">All Honduras Real Estate Services</h2>
+  listed_by: Listed By %{user}
+  new_residential: Add New Residential Listing
+  new_commercial: Add New Commercial Listing
+  squarefeet: Square Feet
+  privatepool: Private Pool
+  waterview: Water View
+  golf: Golf Course
+  water: Water Front
+  jumbotron_residentialtitle_html: <h2>Residential Property Listing</h2>
+  jumbotron_commercialtitle_html: <h2>Commercial Property Listing</h2>
+  privacy_html: <h2 style="font-family:Arial"><strong>PRIVACY POLICY</strong></h2>
+  architect_html: <h3 class="panel-title">ARCHITECTS</h3>
+  airconditioner_html: <h3 class="panel-title">AIR CONDITIONING/ HEATING / VENTILATION</h3>
+  asphalt_html: <h3 class="panel-title">ASPHALT COMPANIES</h3>
+  banks_html:  <h3 class="panel-title">BANKS</h3>
+  builder_html:  <h3 class="panel-title">BUILDERS</h3>
+  building_html: <h3 class="panel-title">BUILDING MATERIALS</h3>
+  cashbuyer_html: <h3 class="panel-title">CASH BUYERS</h3>
+  cabinet_html: <h3 class="panel-title">CABINETS</h3>
+  cement_html:  <h3 class="panel-title">CEMENT AND CONCRETE</h3>
+  cleaning_html:  <h3 class="panel-title">CLEANING SERVICES</h3>
+  countertops_html: <h3 class="panel-title">COUNTERTOPS AND SURFACES</h3>
+  cleaningremoval_html:  <h3 class="panel-title">CLEANING / REMOVAL WASTE</h3>
+  decks_html: <h3 class="panel-title">DECKS AND FENCES</h3>
+  drywall_html: <h3 class="panel-title">DRYWALL</h3>
+  electricians_html: <h3 class="panel-title">ELECTRICIANS</h3>
+  eav_html:  <h3 class="panel-title">EAVESTROUGHING</h3>
+  exterior_html: <h3 class="panel-title">EXTERIOR DESIGNERS</h3>
+  engineer_html: <h3 class="panel-title">ENGINEERS</h3>
+  flooring_html: <h3 class="panel-title">FLOORING</h3>
+  framing_html: <h3 class="panel-title">FRAMING</h3>
+  foundation_html: <h3 class="panel-title">FOUNDATION (NEW + REPAIRS)</h3>
+  fireplace_html: <h3 class="panel-title">FIREPLACE / CHIMNEY</h3>
+  general_html: <h3 class="panel-title">GENERAL CONTRACTORS</h3>
+  homeinspector_html: <h3 class="panel-title">HOME INSPECTORS</h3>
+  hardmoney_html: <h3 class="panel-title">HARDMONEY LENDERS</h3>
+  theater_html: <h3 class="panel-title">HOME THEATERS</h3>
+  insulation_html:  <h3 class="panel-title">INSULATION</h3>
+  interior_html: <h3 class="panel-title">INTERIOR DESIGNERS</h3>
+  wood_html: <h3 class="panel-title">ALUMINUM / WOOD / VINYL</h3>
+  light_html: <h3 class="panel-title">LIGHTING FIXTURES / FANS</h3>
+  landscaping_html: <h3 class="panel-title">LANDSCAPING</h3>
+  landsurveyors_html: <h3 class="panel-title">LAND SURVEYORS</h3>
+  moving_html: <h3 class="panel-title">MOVING COMPANIES</h3>
+  mortgage_html: <h3 class="panel-title">MORTGAGE BROKERS</h3>
+  mold_html: <h3 class="panel-title">MOLD INSPECTORS</h3>
+  paint_html: <h3 class="panel-title">PAINTING</h3>
+  plumbing_html: <h3 class="panel-title">PLUMBING</h3>
+  privatefirm_html: <h3 class="panel-title">PRIVATE ASSESSMENT FIRMS</h3>
+  propertyfirm_html: <h3 class="panel-title">PROPERTY MANAGEMENT FIRMS</h3>
+  poolcleaner_html: <h3 class="panel-title">POOL CLEANERS</h3>
+  poolrepair_html: <h3 class="panel-title">POOL REPAIRS</h3>
+  realtor_html: <h3 class="panel-title">REALTORS</h3>
+  accountant_html: <h3 class="panel-title">REAL ESTATE ACCOUNTANTS</h3>
+  lawyer_html: <h3 class="panel-title">REAL ESTATE LAWYERS</h3>
+  realestate_html: <h3 class="panel-title">REAL ESTATE FIRMS</h3>
+  rentalpropertyfirm_html: <h3 class="panel-title">RENTAL PROPERTY FIRMS/MANAGEMENT</h3>
+  remodel_html: <h3 class="panel-title">REMODEL / RENOVATION SPECIALISTS</h3>
+  roofing_html: <h3 class="panel-title">ROOFING</h3>
+  security_html: <h3 class="panel-title">SECURITY COMPANIES</h3>
+  septic_html: <h3 class="panel-title">SEPTIC SPECIALISTS</h3>
+  solarscreen_html: <h3 class="panel-title">SOLAR SCREENS / WINDOW TREATMENTS</h3>
+  staging_html: <h3 class="panel-title">STAGING COMPANIES</h3>
+  soffit_html: <h3 class="panel-title">SOFFIT FACIA</h3>
+  spapool_html: <h3 class="panel-title">SPA AND POOL SALES / INSTALLERS / REPAIRS</h3>
+  solarenergy_html: <h3 class="panel-title">SOLAR ENERGY</h3>
+  dissable_html: <h3 class="panel-title">SENIOR OR DISABLED HOME OR OFFICE EQUIPMENT</h3>
+  tax_html: <h3 class="panel-title">TAX SPECIALIST</h3>
+  termite_html: <h3 class="panel-title">TERMITE INSPECTORS</h3>
+  titlecompany_html: <h3 class="panel-title">TITLE COMPANIES</h3>
+  windows_html: <h3 class="panel-title">WINDOWS MANUFACTURERS AND INSTALLERS</h3>
+  weather_html: <h3 class="panel-title">WEATHER PROOFING / WINTERIZING</h3>
+  appliance_html: <h3 class="panel-title">APPLIANCE SALES</h3>
+  appliancerepair_html: <h3 class="panel-title">APPLIANCE REPAIRS</h3>
+  adtitle_html:  <font color="cf142b"><h2 style="font-family:Calibri"><strong>Choose Your Advertising Plan Or List a Property For Rent/Sale And Maximize The Customers For Your Business!</strong></h2></font>
+        <p class="lead"></p>
+  addtitle_html:  <font color="1d3894"><h2 style="font-family:Calibri"><strong>** First 50 Users that subscribe to Gold or Listing Advertising will receive 30% off for the entire length of their commitment **</strong></h2></font>
+        <p class="lead"></p>
+  adsubtitle_html:   <font color="858585"><h6 style="font-family:Calibri"><strong>*To cancel your subscription please contact us to our customer support email or our customer support phone.</strong></h6></font>
+        <p class="lead"></p>
+  psubtitle_html:  <font color="1d3894"><h3 style="font-family:Calibri"><strong>***Ask for our Platinum and Diamond Packages***</strong></h3></font>
+        <p class="lead"></p>
+  wsubtitle_html: <font color="bf0a30"><h4 style="font-family:Calibri"><strong>**Ask about our Website Development Service for your business by D&G Global to link your business with Ontario's Only to maximize your clients.**</strong></h4></font>
+        <p class="lead"></p>
+  contact_html: <h4 style="font-family:Calibri"><strong>Contact Us:</strong></h4>
+  about_html: <h4 style="font-family:Calibri"> <strong> About Us:</strong></h4><h6>Ontario's Only is an online marketing company that offers proffessional advertising service to all real estate professionals in the province of Ontario Canada.</h6>
+  companyinfo: ENTER YOUR COMPANY INFORMATION
+  follow_html: <h4 style="font-family:Calibri"><strong>FOLLOW US<strong></h4>
+  jumbotron_title_html: <h2>Advertise Real Estate Services</h2>
+  businessname: Business Name
+  website: Company Website
+  address: Address
+  zipcode: Zip Code
+  city: City
+  businessphone: Business Phone
+  contactname: Contact Name
+  businessemail: Company Email
+  description: Business Profile
+  plan: PLEASE SELECT AN ADVERTISING PLAN
+  paymentinfo: PAYMENT INFORMATION
+  name: Full Name
+  billingaddress: Billing Address
+  email: Email
+  creditcard: Credit Card Number
+  securitycode: Security Code (CVV)
+  cardexpiration: Card Expiration Date
+  submit: Submit my Order
+  ourcompany_html:  <h2 style="font-family:Arial"><strong>OUR COMPANY</strong></h2>
+  bodycompany_html: <h4><strong>Ontario's Only</strong> is an online marketing company that offers proffessional advertising service to all real estate professionals in the province of Canada.<br><br><strong>Ontario's Only</strong> is part of <link><a href="http://www.dngglobal.ca" target="_blank"><strong>D&G Global</strong></a></link> marketing software strategies that maximizes clients exposure and customers databases. <br><br><link><a href="http://www.dngglobal.ca" target="_blank"><strong>D&G Global</strong></a></link> is a software development consulting company that offers customized techology services such as website development services, marketing strategies, global exposure through <strong>Ontario's Only</strong><br></h4>
+  subbodycompany_html: <h4><strong>HOW TO CONTACT US</strong></h4>
+  morecompany_html: <h4>If you would like to contact us with any inquiries or comments please send an email to <strong>customers@dngglobal.ca</strong> or call to <strong>1-844-DG-GLOBE</strong> <br></p></h4>
+  jumbotron_flooringstitle_html: <h2>Flooring Services</h2>
+  jumbotron_drywalltitle_html: <h2>Drywall Services</h2>
+  jumbotron_cabinetstitle_html: <h2>Cabinets Services</h2>
+  jumbotron_countertoptitle_html: <h2>Countertop Services</h2>
+  jumbotron_architecttitle_html:  <h2>Architects Services</h2>
+  jumbotron_accountantstitle_html: <h2>Accountants Services</h2>
+  jumbotron_airconditionertitle_html: <h2>Air Conditioner and Ventilation Services</h2>
+  jumbotron_cashbuyertitle_html: <h2>Cashbuyer Services</h2>
+  jumbotron_framingtitle_html: <h2>Framing Services</h2>
+  jumbotron_contratortitle_html: <h2>General Contractors Services</h2>
+  jumbotron_hardmoneytitle_html: <h2>Hardmoney Lenders Services</h2>
+  jumbotron_homeinspectortitle_html: <h2>Home Inspectors Services</h2>
+  jumbotron_insulationtitle_html: <h2>Insulation Services</h2>
+  jumbotron_interiordesignertitle_html: <h2>Interior Designers Services</h2> 
+  jumbotron_landscapingtitle_html: <h2>Landscaping Services</h2> 
+  jumbotron_landsurveyortitle_html: <h2>Land Surveyor Services</h2>
+  jumbotron_lawyertitle_html: <h2>Real Estate Lawyers Services</h2>
+  jumbotron_moldtitle_html: <h2>Mold Services</h2>
+  jumbotron_mortgagetitle_html: <h2>Mortgage Services</h2>
+  jumbotron_movingtitle_html: <h2>Moving Companies Services</h2>
+  jumbotron_paintingtitle_html: <h2>Painting Services</h2>
+  jumbotron_plumbingtitle_html: <h2>Plumbing Services</h2>
+  jumbotron_poolcleanertitle_html: <h2>Pool Cleaning Services</h2>
+  jumbotron_poolrepairtitle_html: <h2>Pool Repair Services</h2>
+  jumbotron_privatebanktitle_html: <h2>Banks Services</h2>
+  jumbotron_privatefirmtitle_html: <h2>Private Firms Services</h2>
+  jumbotron_propertymanagetitle_html: <h2>Property Management Firms</h2>
+  jumbotron_realestatetitle_html: <h2>Real Estate Firms</h2>
+  jumbotron_realtortitle_html: <h2>Realtors</h2>
+  jumbotron_rentalpropertytitle_html: <h2>Rental Properties Services</h2>
+  jumbotron_roofingtitle_html: <h2>Roofing Services</h2>
+  jumbotron_securitytitle_html: <h2>Security Services</h2>
+  jumbotron_septictitle_html: <h2>Septic Services</h2>
+  jumbotron_solarscreentitle_html: <h2>Solar Screen Services</h2>
+  jumbotron_stagingtitle_html: <h2>Staging Services</h2>
+  jumbotron_taxestitle_html: <h2>Taxes Specialist Services</h2>
+  jumbotron_termitetitle_html: <h2>Termite Inspector Services</h2>
+  jumbotron_titletitle_html: <h2>Title Companies Services</h2>
+  jumbotron_windowtitle_html: <h2>Windows Services</h2>
+  jumbotron_missingservicestitle_html: <h2>Real Estate Services</h2>
+  jumbotron_asphalttitle_html: <h2>Asphalt Services</h2>
+  searchservice_html: <h4><strong>Find a Service</strong></h4>
+  jumbotron_subscriptiontitle_html: <h2>Real Estate Businesses Subscribed</h2>
+  companynamesubscription_html: <strong><th class="center">Company Name</th></strong>
+  companysitesubscription_html: <strong><th class="center">Company Website</th></strong>
+  addresssubscription_html: <strong><th class="center">Address</th></strong>
+  citysubscription_html: <strong><th class="center">City</th></strong>
+  zipcodesubscription_html: <strong><th class="center">Zipcode</th></strong>
+  phonesubscription_html: <strong><th class="center">Phone Number</th></strong>
+  actionsubscription_html: <th class="center">Action</th>
+  image_html: <th class="center">Image</th>
+  add_subscription: SUBSCRIBE
+  servicecompanywebsite: Company Website
+  servicecompanyphone: Company Phone
+  servicecompanyaddress: Address
+  addservice: New Real Estate Service
+  searchresults_html: <h4><strong>SEARCH RESULTS:</strong></h4><br>
+  back: Back
+  companycontactname: Company Contact Name
+  companyservicephone: Company Phone
+  generalcompany: Company Information Details
+  mapview: Map View Location

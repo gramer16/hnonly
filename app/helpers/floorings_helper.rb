@@ -1,0 +1,2 @@
+module FlooringsHelper
+end

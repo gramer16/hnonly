@@ -1,0 +1,141 @@
+<div class="row">
+<div class="col-md-4">
+<div class="thumbnail">
+  <%= image_tag @subscriptionpackage.image.url %>
+</div>
+<h3><%= @subscriptionpackage.package_name %></h3>
+<h3><%= number_to_currency(@subscriptionpackage.price1) %></h3>
+</div>
+<div class="col-md-8">
+<%= form_for([@subscriptionpackage, @order]) do |f| %>
+  <% if @order.errors.any? %>
+    <div id="error_explanation" class="alert alert-danger alert-dismissable">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <h4><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h4>
+
+      <ul>
+      <% @order.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div id="stripe_error" class="alert alert-danger" style="display:none">
+        <noscript>JavaScript is not enabled and is required for this form. First enable it in your web browser settings.</noscript>
+  </div>
+
+  <div class="form-group">
+    <div class="row">
+      <div class="col-md-4">
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name, class: "form-control" %>
+  </div>
+ <div class="col-md-4">
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name, class: "form-control" %>
+  </div>
+  <div class="col-md-4">
+    <%= f.label :company_name %><br>
+    <%= f.text_field :company_name, class: "form-control" %>
+  </div>
+  <div class="col-md-12">
+    <%= f.label :street_address %><br>
+    <%= f.text_area :street_address, class: "form-control" %>
+  </div>
+</div>
+</div>
+ <div class="form-group">
+    <div class="row">
+      <div class="col-md-4">
+    <%= f.label :city %><br>
+    <%= f.text_field :city, class: "form-control" %>
+  </div>
+  <div class="col-md-4">
+    <%= f.label :state %><br>
+    <%= f.text_field :state, class: "form-control" %>
+  </div>
+ <div class="col-md-4">
+    <%= f.label :zipcode %><br>
+    <%= f.number_field :zipcode, class: "form-control" %>
+  </div>
+ <div class="col-md-4">
+    <%= f.label :phone_number %><br>
+    <%= f.text_field :phone_number, class: "form-control" %>
+  </div>
+</div>
+</div>
+ <div class="form-group">
+    <div class="row">
+      <div class="col-md-4">
+    <%= f.label :email %><br>
+    <%= f.text_field :email, class: "form-control" %>
+  </div>
+  <div class="col-md-4">
+    <%= label_tag :nil, "Real Estate Company" %>
+    <%= f.text_field :company_service, class: "form-control" %>
+  </div>
+</div>
+</div>
+<div class="thumbnail">
+    <div class="field">
+    <%= label_tag :nil, "PAYMENT INFORMATION" %>
+    </div>
+  <div class="form-group">
+    <div class="row">
+      <div class="col-md-8">
+        <%= label_tag :card_number, "Credit Card Number" %>
+        <%= text_field_tag :card_number, nil, { :name => nil, :'data-stripe' => "number", class: "form-control" } %>
+      </div>
+       <div class="col-md-2">
+        <%= image_tag("creditcard.png", :size => "220x33", :alt => "Credit" ) %>      
+      </div>
+    </div>
+  </div>
+      <div class="form-group">
+    <div class="row">
+      <div class="col-md-2">
+        <%= label_tag :card_code, "CVC" %>
+        <%= text_field_tag :card_code, nil, { :name => nil, :'data-stripe' => "cvc", class: "form-control" } %>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= label_tag nil, "Expiration Date" %>
+    <div class="row">
+      <div class="col-md-3">
+        <%= select_month nil, { use_two_digit_numbers: true }, { :name => nil, :'data-stripe' => "exp-month", class: "form-control" } %>
+      </div>
+      <div class="col-md-3">
+        <%= select_year nil, { start_year: Date.today.year, end_year: Date.today.year+10 }, { :name => nil, :'data-stripe' => "exp-year", class: "form-control" } %>
+      </div>
+    </div>
+  </div>
+   <div class="form-group">
+  <div class="row">
+ <div class="right">
+  <div class="col-md-12">
+    <%= image_tag("securepayment.png", :size => "140x70", :alt => "Credit" ) %> 
+    <%= image_tag("pcicompliant.png", :size => "120x70", :alt => "Credit" ) %> 
+  </div>
+</div>
+  </div>
+  </div>
+</div>
+  <div class="center">
+        <button type ="button" class="btn btn-link" data-toggle="collapse" data-target="#filter">
+          LISTING A RESIDENTIAL OR COMMERCIAL PROPERTY DETAILS<br>
+        </button>
+  <div id="filter" class="collapse in">
+    <div class="thumbnail">
+    </div>
+  </div>
+  
+    
+
+  <div class="form-group">
+    <%= f.submit "Complete Order", class: "btn btn-success" %>
+  </div>
+<% end %>
+</div>
+</div>

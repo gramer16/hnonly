@@ -1,0 +1,58 @@
+<%= form_for(@cashbuyer,:html => { :multipart => true }) do |f| %>
+  <% if @cashbuyer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cashbuyer.errors.count, "error") %> prohibited this cashbuyer from being saved:</h2>
+
+      <ul>
+      <% @cashbuyer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="thumbnail">
+  <div class="row">
+    <div class="col-md-4">
+    <%= f.label :company_name %><br>
+    <%= f.text_field :company_name, class: "form-control" %><br>
+  </div>
+   <div class="col-md-4">
+    <%= f.label :company_description %><br>
+    <%= f.text_area :company_description, class: "form-control" %><br>
+  </div>
+   <div class="col-md-4">
+    <%= f.label :address %><br>
+    <%= f.text_area :address, class: "form-control" %><br>
+  </div>
+   <div class="col-md-4">
+    <%= f.label :city %><br>
+    <%= f.text_field :city, class: "form-control" %><br>
+  </div>
+   <div class="col-md-4">
+    <%= f.label :zipcode %><br>
+    <%= f.number_field :zipcode, class: "form-control" %><br>
+  </div>
+   <div class="col-md-4">
+    <%= f.label :contact_name %><br>
+    <%= f.text_field :contact_name, class: "form-control" %><br>
+  </div>
+   <div class="col-md-4">
+    <%= f.label :company_website %><br>
+    <%= f.text_field :company_website, class: "form-control" %><br>
+  </div>
+   <div class="col-md-4">
+    <%= f.label :company_phone %><br>
+    <%= f.text_field :company_phone, class: "form-control" %><br>
+  </div>
+   <div class="col-md-4">
+    <%= f.label :email %><br>
+    <%= f.text_field :email, class: "form-control" %><br>
+  </div>
+  <div class="col-md-4">
+    <%= f.label :pictures %>  <%= f.file_field :image, class: "form-control" %><br><br>
+    </div>
+   <div class="col-md-4">
+    <%= f.submit "Create a Cash Buyer Service", class: "btn btn-warning" %>
+  </div>
+<% end %>

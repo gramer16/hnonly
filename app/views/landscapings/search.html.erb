@@ -1,0 +1,34 @@
+<%= t('searchresults_html') %>
+<div class="thumbnail">
+  <div class="center"> 
+    <div class="row">
+     <% @landscapings.each do |landscaping| %>
+      <div class="col-md-3">
+      <div class="thumbnail">
+        <%= link_to image_tag(landscaping.image.url), landscaping %>
+        <div class="caption">
+          <h4><strong><%= landscaping.company_name %></strong></h4>
+          <strong><th><%= label_tag :nil, t('servicecompanywebsite') %></th></strong><br>
+            <%= link_to landscaping.company_website, landscaping.company_website %><br>
+            <strong><th><%= label_tag :nil, t('servicecompanyphone') %></th></strong><br>
+            <%= landscaping.company_phone %><br>
+           <strong><th><%= label_tag :nil, t('servicecompanyaddress') %></th></strong><br>
+           <%= landscaping.address %><br> 
+           <strong><th><%= label_tag :nil, t('city') %></th></strong><%= landscaping.city %><br>
+           <strong><th><%= label_tag :nil, t('zipcode') %></th></strong><br><%= landscaping.zipcode %><br>
+           <br>
+           
+           <td><%= link_to 'Show', landscaping, class: "btn btn-success" %></td>
+        
+        <td><%= link_to 'Edit', edit_landscaping_path(landscaping), class: "btn btn-success" %></td>
+        <td><%= link_to 'Destroy', landscaping, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-success" %></td>
+        </div>
+      </div>
+    </div>
+    <% end %>
+    </div>
+
+  </div>
+</div>   
+   
+<%= link_to t('back'), landscapings_path, class: "btn btn-link"  %>

@@ -1,0 +1,34 @@
+<%= t('searchresults_html') %>
+<div class="thumbnail">
+  <div class="center"> 
+    <div class="row">
+        <% @termiteinspectors.each do |termiteinspector| %>
+      <div class="col-md-3">
+      <div class="thumbnail">
+        <%= link_to image_tag(termiteinspector.image.url), termiteinspector %>
+        <div class="caption">
+          <h4><strong><%= termiteinspector.company_name %></strong></h4>
+          <strong><th><%= label_tag :nil, t('servicecompanywebsite') %></th></strong><br>
+            <%= link_to termiteinspector.company_website, termiteinspector.company_website %><br>
+            <strong><th><%= label_tag :nil, t('servicecompanyphone') %></th></strong><br>
+            <%= termiteinspector.company_phone %><br>
+           <strong><th><%= label_tag :nil, t('servicecompanyaddress') %></th></strong><br>
+           <%= termiteinspector.address %><br> 
+           <strong><th><%= label_tag :nil, t('city') %></th></strong><%= termiteinspector.city %><br>
+           <strong><th><%= label_tag :nil, t('zipcode') %></th></strong><br><%= termiteinspector.zipcode %><br>
+           <br>
+           
+           <td><%= link_to 'Show', termiteinspector, class: "btn btn-success" %></td>
+        
+        <td><%= link_to 'Edit', edit_termiteinspector_path(termiteinspector), class: "btn btn-success" %></td>
+        <td><%= link_to 'Destroy', termiteinspector, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-success" %></td>
+        </div>
+      </div>
+    </div>
+    <% end %>
+    </div>
+
+  </div>
+</div>   
+   
+<%= link_to t('back'), termiteinspectors_path, class: "btn btn-link"  %>

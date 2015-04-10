@@ -1,0 +1,101 @@
+  <div class="jumbotron">
+  <div class="left">
+    <%= t('jumbotron_commercialtitle_html') %>
+  
+ </div>
+ </div>
+  <div class="left">
+     <%= t('searchcommercial_html') %>
+
+<%= form_tag search_commercialpropertiesforsales_path, method: :get do %>
+          <p>
+<%= text_field :search, params[:search], placeholder: t('searchtextbox'),class: "form-control" %><br>
+<div class="right">
+        <button type ="button" class="btn btn-link" data-toggle="collapse" data-target="#filter">
+          <%= t('advancesearch') %>
+          <br>
+        </button>
+          <div id="filter" class="collapse in">
+            <br>
+            <div class="thumbnail">
+            <div class= "row">
+                <div class= "col-md-4">
+                 <div class= "form-group">
+                  <%= label_tag :Purchase_or_Lease, t('salerent') %><br>
+                  <%= select_tag(:action, options_for_select([["For Sale", "Sale"],["For Rent","Rent"]], params[:action]),{
+                    include_blank: false}) %>
+                  </div>
+                  </div>
+                  <div class= "col-md-4">
+                  <div class= "form-group">
+                <%= label_tag :type_of_Property, t('propertytype') %><br>
+                 <%= select_tag(:property_type, options_for_select([["Office","Office"],["Industrial","Industrial"],["Retail","Retail"],["Land","Land"],["Multi-Family","Multi Family"], ["Healthcare","Healthcare"], ["Development Opportunity","Development Opportunity"], ["Flex Space","Flex Space"], ["Mixed Use","Mixed Use"], ["Special Purpose","Special Purpose"]], params[:property_type]),{include_blank: false}) %>
+               </div>
+             </div>
+             <div class= "col-md-4">
+               <div class= "form-group">
+               <%= label_tag :Status, t('status') %><br>
+                 <%= select_tag(:status, options_for_select([["Active","Active"],["Pending", "Pending"],["Pending Continue to Show", "Pending Continue to Show"],["Sold", "Sold"]],params[:status]),{include_blank: false}) %>
+                </div>
+              </div>
+              <div class= "col-md-4">
+                <div class= "form-group">
+                <%= label_tag :construction_Type, t('construction') %><br>
+                  <%= select_tag(:construction_type, options_for_select([["New Construction", "New Construction"],["Renovated","Renovated"],["Needs Renovations", "Needs Renovations"]], params[:construction_type]),{include_blank: false}) %>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+</div>
+<%= submit_tag t('searchbtn'), name: nil ,class: "btn btn-success" %>
+      </p>
+</div>
+      <% end %>
+
+
+ <div class="thumbnail">
+    <div class="center"> 
+    <div class="row">
+    <% @commercialpropertiesforsales.each do |commercialpropertiesforsale| %>
+    <div class="col-md-3">
+    <div class="thumbnail">
+      <%= link_to image_tag(commercialpropertiesforsale.image.url), commercialpropertiesforsale %>
+    <div class="caption">
+      <h3><strong><%= commercialpropertiesforsale.address %></strong></h3>
+      <h4><strong><th><%= label_tag :nil, t('price') %></th> <%= number_to_currency(commercialpropertiesforsale.price) %></strong></h4>
+      <p>
+        <p><%= t('listed_by', user: commercialpropertiesforsale.user.name) %></p>
+        <th><%= label_tag :type_of_Property, t('propertytype') %></th> <%= commercialpropertiesforsale.property_type %><br>
+        <th><%= label_tag :Purchase_or_Lease, t('salerent') %></th> <%= commercialpropertiesforsale.action %><br>
+        <th><%= label_tag :nil, t('city') %></th> <%= commercialpropertiesforsale.city %><br>
+        <th><%= label_tag :nil, t('zipcode') %></th> <%= commercialpropertiesforsale.zipcode %><br>
+        <th><%= label_tag :nil, t('realestatecompany') %></th> <%= commercialpropertiesforsale.realestatecompany %><br>
+        <th><%= label_tag :nil, t('officephone') %></th> <%= commercialpropertiesforsale.officephone %><br>
+        <th><%= label_tag :nil, t('commercialwebsite') %></th> <%= commercialpropertiesforsale.companywebsite %><br>
+         <th><%= label_tag :nil, t('listingagent') %></th> <%= commercialpropertiesforsale.listingagent %><br>
+         <th><%= label_tag :nil, t('agentemail') %></th> <%= commercialpropertiesforsale.emailagent %><br>
+         <th><%= label_tag :nil, t('agentphone') %></th> <%= commercialpropertiesforsale.agentphone %><br>
+          <th><%= label_tag :nil, t('squarefeet') %></th> <%= commercialpropertiesforsale.totalbuildingSF %><br>
+          <th><%= label_tag :nil, t('suites') %></th> <%= commercialpropertiesforsale.totalunits %><br>
+          <th><%= label_tag :nil, t('floornumbers') %></th> <%= commercialpropertiesforsale.floorsnumber %><br>
+          <th><%= label_tag :nil, t('details') %></th> <%= commercialpropertiesforsale.property_description %><br>
+          <th><%= label_tag :construction_Type, t('construction') %></th> <%= commercialpropertiesforsale.construction_type %>
+      </p>
+        <td><%= link_to 'Show', commercialpropertiesforsale, class: "btn btn-warning" %></td>
+        <% if (user_signed_in?) && (current_user == commercialpropertiesforsale.user) %>
+        <td><%= link_to 'Edit', edit_commercialpropertiesforsale_path(commercialpropertiesforsale), class: "btn btn-warning" %></td>
+        <td><%= link_to 'Destroy', commercialpropertiesforsale, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-warning" %></td>
+         <% end %>
+    </div>
+  </div>
+</div>
+    <% end %>
+  </div>
+</div>
+</div>
+
+<br>
+<div class="left">
+  <%= link_to t('new_commercial'), new_commercialpropertiesforsale_path, class: "btn btn-success" %>
+</div>

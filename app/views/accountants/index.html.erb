@@ -1,0 +1,54 @@
+<div class="jumbotron">
+  <div class="left">
+    <%= t('jumbotron_accountantstitle_html') %>
+  
+ </div>
+ </div>
+
+   <div class="left"> 
+   <%= t('searchservice_html') %>
+   <%= form_tag search_accountants_path, method: :get do %>
+          <p>
+        <%= text_field :search, params[:search], placeholder: t('searchtextbox'), class: "form-control" %>
+        <br>
+         <%= submit_tag t('searchbtn'), name: nil ,class: "btn btn-success" %>
+      </p>
+    </div>
+ <% end %>
+
+<div class="thumbnail">
+  <div class="center"> 
+    <div class="row">
+     <% @accountants.each do |accountant| %>
+      <div class="col-md-3">
+      <div class="thumbnail">
+        <%= link_to image_tag(accountant.image.url), accountant %>
+        <div class="caption">
+          <h4><strong><%= link_to accountant.company_name, accountant %></strong></h4>
+          <strong><th><%= label_tag :nil, t('servicecompanywebsite') %></th></strong><br>
+            <%= link_to accountant.company_website, accountant.company_website %><br>
+            <strong><th><%= label_tag :nil, t('servicecompanyphone') %></th></strong><br>
+            <%= accountant.company_phone %><br>
+           <strong><th><%= label_tag :nil, t('servicecompanyaddress') %></th></strong><br>
+           <%= accountant.address %><br> 
+           <strong><th><%= label_tag :nil, t('city') %></th></strong><%= accountant.city %><br>
+           <strong><th><%= label_tag :nil, t('zipcode') %></th></strong><br><%= accountant.zipcode %><br>
+           <br>
+           <% if user_signed_in? && current_user.admin? %>
+        <td><%= link_to 'Edit', edit_accountant_path(accountant), class: "btn btn-success" %></td>
+        <td><%= link_to 'Destroy', accountant, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-success" %></td>
+        <% end %>
+        </div>
+      </div>
+    </div>
+    <% end %>
+    </div>
+
+  </div>
+</div>   
+   
+<br>
+<br>
+
+<%= link_to t('add_service'), new_accountant_path, class: "btn btn-success" %>
+

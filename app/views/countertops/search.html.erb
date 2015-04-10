@@ -1,0 +1,40 @@
+<%= t('searchresults_html') %>
+<div class="thumbnail">
+  <div class="center"> 
+    <div class="row">
+     <% @countertops.each do |countertop| %>
+      <div class="col-md-3">
+      <div class="thumbnail">
+        <%= link_to image_tag(countertop.image.url), countertop %>
+        <div class="caption">
+          <h4><strong><%= countertop.company_name %></strong></h4>
+          <strong><th><%= label_tag :nil, t('servicecompanywebsite') %></th></strong><br>
+            <%= link_to countertop.company_website, countertop.company_website %><br>
+            <strong><th><%= label_tag :nil, t('servicecompanyphone') %></th></strong><br>
+            <%= countertop.company_phone %><br>
+           <strong><th><%= label_tag :nil, t('servicecompanyaddress') %></th></strong><br>
+           <%= countertop.address %><br> 
+           <strong><th><%= label_tag :nil, t('city') %></th></strong><%= countertop.city %><br>
+           <strong><th><%= label_tag :nil, t('zipcode') %></th></strong><br><%= countertop.zipcode %><br>
+           <br>
+           
+           <td><%= link_to 'Show', countertop, class: "btn btn-success" %></td>
+        
+        <td><%= link_to 'Edit', edit_countertop_path(countertop), class: "btn btn-success" %></td>
+        <td><%= link_to 'Destroy', countertop, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-success" %></td>
+        </div>
+      </div>
+    </div>
+    <% end %>
+    </div>
+
+  </div>
+</div>
+
+   
+
+<br>
+<br>
+
+
+<%= link_to t('back'), countertops_path, class: "btn btn-link" %>

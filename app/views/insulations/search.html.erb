@@ -1,0 +1,34 @@
+<%= t('searchresults_html') %>
+<div class="thumbnail">
+  <div class="center"> 
+    <div class="row">
+     <% @insulations.each do |insulation| %>
+      <div class="col-md-3">
+      <div class="thumbnail">
+        <%= link_to image_tag(insulation.image.url), insulation %>
+        <div class="caption">
+          <h4><strong><%= insulation.company_name %></strong></h4>
+          <strong><th><%= label_tag :nil, t('servicecompanywebsite') %></th></strong><br>
+            <%= link_to insulation.company_website, insulation.company_website %><br>
+            <strong><th><%= label_tag :nil, t('servicecompanyphone') %></th></strong><br>
+            <%= insulation.company_phone %><br>
+           <strong><th><%= label_tag :nil, t('servicecompanyaddress') %></th></strong><br>
+           <%= insulation.address %><br> 
+           <strong><th><%= label_tag :nil, t('city') %></th></strong><%= insulation.city %><br>
+           <strong><th><%= label_tag :nil, t('zipcode') %></th></strong><br><%= insulation.zipcode %><br>
+           <br>
+           
+           <td><%= link_to 'Show', insulation, class: "btn btn-success" %></td>
+        
+        <td><%= link_to 'Edit', edit_insulation_path(insulation), class: "btn btn-success" %></td>
+        <td><%= link_to 'Destroy', insulation, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-success" %></td>
+        </div>
+      </div>
+    </div>
+    <% end %>
+    </div>
+
+  </div>
+</div>   
+   
+<%= link_to t('back'), insulations_path, class: "btn btn-link"  %>

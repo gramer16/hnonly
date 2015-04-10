@@ -1,0 +1,57 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  mls_number: MyString
+  property_type: MyString
+  action: MyString
+  address: MyText
+  zipcode: 1
+  city: MyString
+  price: 9.99
+  realestatecompany: MyString
+  officephone: MyString
+  companywebsite: MyString
+  listingagent: MyString
+  emailagent: MyString
+  agentphone: MyString
+  assetclass: MyString
+  totalbuildingSF: 1
+  totalunits: 1
+  cap_rate: MyString
+  floorsnumber: 1
+  construction_type: MyString
+  property_description: MyText
+  parking_total: 1
+  elevators: MyString
+  individual_suiteSQF: 1
+  id: 
+  year_completed: 1
+  lotsqft: 1
+
+two:
+  mls_number: MyString
+  property_type: MyString
+  action: MyString
+  address: MyText
+  zipcode: 1
+  city: MyString
+  price: 9.99
+  realestatecompany: MyString
+  officephone: MyString
+  companywebsite: MyString
+  listingagent: MyString
+  emailagent: MyString
+  agentphone: MyString
+  assetclass: MyString
+  totalbuildingSF: 1
+  totalunits: 1
+  cap_rate: MyString
+  floorsnumber: 1
+  construction_type: MyString
+  property_description: MyText
+  parking_total: 1
+  elevators: MyString
+  individual_suiteSQF: 1
+  id: 
+  year_completed: 1
+  lotsqft: 1

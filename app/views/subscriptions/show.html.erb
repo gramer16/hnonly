@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="col-md-6">
+    <div class="thumbnail">
+      <%= image_tag @subscription.image.url %>
+      <strong><%= @subscription.company_name %></strong>
+      <br>
+      <br>
+      <%= t('companysitesubscription_html') %> 
+      <%= link_to @subscription.website, @subscription.website %><br>
+      <%= t('phonesubscription_html') %>
+     <%= @subscription.phone %><br>
+     <%= t('addresssubscription_html') %>
+     <%= @subscription.address %><br>
+      <%= t('citysubscription_html') %>  
+     <%= @subscription.city %><br>
+     <%= t('zipcodesubscription_html') %> 
+     <%= @subscription.zipcode %><br>
+    </div>
+     <br>
+
+  </div>
+  <div class="col-md-6">
+<iframe
+  width="500"
+  height="180"
+  frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAUOQ0h7ZYU56FuY9ziMMXURoIlHxC3pfY
+    &q=<%= @subscription.address.parameterize %>">
+</iframe>
+  </div>
+
+</div>
+
+
+<%= link_to 'Edit', edit_subscription_path(@subscription), class: "btn btn-link" %> |
+<%= link_to t('back'), subscriptions_path, class: "btn btn-link" %>
+
