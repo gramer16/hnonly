@@ -1,5 +1,7 @@
 class LawyersController < ApplicationController
   before_action :set_lawyer, only: [:show, :edit, :update, :destroy]
+  before_action :check_user, only: [:destroy, :edit]
+
   def search
     if params[:search].present?
       @lawyers = Lawyer.search(params[:search])
@@ -8,6 +10,9 @@ class LawyersController < ApplicationController
     end
   end
   
+  def autocomplete
+    render json: Arquitect.search(params[:query], fields:[{name: :text_start}], limit: 10).map(&:name)
+  end
 
   def index
     @lawyers = Lawyer.all
@@ -67,4 +72,9 @@ end
     def lawyer_params
       params.require(:lawyer).permit(:company_name, :company_description, :address, :city, :zipcode, :contact_name, :company_website, :company_phone, :email, :image)
     end
+    def check_user
+        unless current_user.admin?
+         redirect_to root_url, alert: "Sorry, Only Honduras's Only Admin can Delete a Subscription"
+    end
+  end
 end
