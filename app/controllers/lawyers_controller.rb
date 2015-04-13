@@ -32,7 +32,6 @@ class LawyersController < ApplicationController
 
   def create
     @lawyer = Lawyer.new(lawyer_params)
-    @lawyer.user_id = current_user.id
     respond_to do |format|
       if @lawyer.save
         format.html { redirect_to @lawyer, notice: 'Service was successfully created.' }
