@@ -50,6 +50,6 @@
 <br>
 <br>  
  </div>
-
-<%= link_to 'Edit', edit_lawyer_path(@lawyer), class: "btn btn-link" %> |
+<% if user_signed_in? && current_user.admin? %>
+<%= link_to 'Edit', edit_lawyer_path(@lawyer), class: "btn btn-link" %> <% end %> |
 <%= link_to t('back'), lawyers_path, class: "btn btn-link" %>
